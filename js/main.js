@@ -1,150 +1,126 @@
-/** Öll Námskeið **/
-
-/** Finna HTML elementin */
-// ath þetta er ur öðru verkefni sem ég er að reyna að fara eftir.
-var addCardDiv = document.getElementById ("addCardDiv")
-var myDiv = document.getElementById ("cardsDiv")
-var showAddCardDiv = document.getElementById("showAddCardDiv")
-
-var addButton = document.getElementById ("addButton")
-
-
-// sækja eða ná í námskeiðin í arrey
-var AllClasses = getElementById("AllClasses")
-var container_all_classes = document.getElementsByClassName
-
-
-// er kannski nóg að hafa aðeins container fyrir title, sucText og button??
-var title = document.getElementById ("title")
-var subText = document.getElementById ("subText")
-var button = document.getElementById ("button")
-
-
-var searchInput = document.getElementById ("myInputSearch")
-
-
 /****** ÖLL NÁMSKEIÐ ******/
 
 // Array á námskeiðum
 
-var AllClasses = [
+var allClasses = [
     {
-        title: "Kundalini jógas",
+        title: "Kundalini jóga",
         subText: "Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "open",
     }
     ,
     {
         title: "Hatha jóga",
         subText: "HATHA er ein þekktasta tegund jóga á vesturlöndunum. HA þýðir sól og THA þýðir máni. Unnið er með jógastöður (asana), öndun (pranayama) og slökun. Jafnvægi styrkist í innkirtlakerfinu, taugakerfinu, vöðvum, stoðkerfi og ónæmiskerfi.",
         button: "Sjá nánar",
+        type: "open",
     }
     ,
     {
         title: "Jóga Nidra",
         subText: "Jóga Nidra jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "open",
     }
     ,
     {
         title: "Mjúkt jóga",
         subText: "Mjúkt jóga jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "open",
     }
     ,
     {
         title: "Meðgöngujóga",
         subText: "Meðgöngujóga jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
     ,
     {
         title: "Mömmujóga",
         subText: "Mömmujóga jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
     ,
     {
         title: "Parajóga",
         subText: "Parajóga jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
     ,
     {
         title: "Núvitund",
         subText: "Núvitund jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
     ,
     {
         title: "Krakkajóga",
         subText: "Krakkajóga jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
     ,
     {
         title: "Jóga fyrir 60+",
         subText: "60+ jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
     ,
     {
         title: "Karlajóga",
         subText: "Karlajóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
     ,
     {
         title: "12 spor",
         subText: "12 spor til vellíðunar er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
+        type: "closed",
     }
 ] // array af námskeiðum
 
+// sækja eða ná í námskeiðin í arrey
+var container_all_classes = document.getElementById("container_all_classes")
 
 /** functions **/
-var AllClasses = function(AllClassesToDisplay){
-    myDiv.innerHTML = ""; // Tæma það sem er í div
+var displayAllClasses = function(allClassesToDisplay){
+    container_all_classes.innerHTML = ""; // Tæma það sem er í container
 
-    for(var i = 0; i<AllClassesToDisplay.length;i++){
-        var card = AllClassesToDisplay[i]
-        AllClasses(jogaClass)
+    for(var i = 0; i<allClassesToDisplay.length;i++){
+        var jogaClass = allClassesToDisplay[i]
+        displayClass(jogaClass)
     }
 
  }
- var AllClasses = function(card){
-    /** bæta við div-ið auka korti */
-        myDiv.innerHTML += `
-        <div class= "open_classes" >
-            <h1>${classes.title}</h1>
-            <p> ${classes.subText}</p>
-            <button>${classes.button}</button>
+
+ var displayClass = function(jogaClass){
+    var divClass = "open_classes" 
+    if (jogaClass.type === "closed") {
+        divClass = "close_classes"
+     }
+    /** bæta við container-inn auka námskeiði */
+    container_all_classes.innerHTML += `
+        <div class= ${divClass} >
+            <h1>${jogaClass.title}</h1>
+            <p> ${jogaClass.subText}</p>
+            <button>${jogaClass.button}</button>
         </div>
         `   
 }
 
-
-// Hér væri gott að gera breytu til að bæta nýju námskeiði við arrey-ið 
-
-
-var makeNewclass = function() {
-    // Ef fyllt er í öll svæðin þá búa til kort en annars setja missing stíl á input-ið
-    if (headlineInput.value.length === 0) { 
-        headlineInput.classList.add("missing")
-    } else {
-        headlineInput.classList.remove("missing")
-    }
-
-    var NewClass = {
-        title: headlineInput.value,
-        subText: textInput.value,
-        button: buttonInput.value,
-       
-    }
-    return NewClass
+// Kalla í fallið ef ég er á námskeiðasíðunni
+if (container_all_classes) {
+    displayAllClasses(allClasses)
 }
-
-
 
 //XXXXXXXXXXXXXXXXXXXXXX  HÉR ERU KENNARAR  XXXXXXXXXXXXXXXXXXXXX
 
@@ -226,6 +202,9 @@ var teachers = [
       
 
 ] // array - kennarar
+
+
+var container_all_teachers = document.getElementById("container_all_teachers")
 
 
 
