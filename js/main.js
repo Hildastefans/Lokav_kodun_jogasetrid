@@ -2,7 +2,7 @@
 
 // Array á námskeiðum
 
-var allClasses = [
+var allClassesArrayVariable = [
     {
         title: "Kundalini jóga",
         subText: "Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
@@ -89,37 +89,37 @@ var allClasses = [
 ] // array af námskeiðum
 
 // sækja eða ná í námskeiðin í arrey
-var container_all_classes = document.getElementById("container_all_classes")
+var containerAllClassesElement = document.getElementById("container_all_classes")
 
 /** functions **/
-var displayAllClasses = function(allClassesToDisplay){
-    container_all_classes.innerHTML = ""; // Tæma það sem er í container
+var displayAllClassesFunction = function(allClassesParameter){
+    containerAllClassesElement.innerHTML = ""; // Tæma það sem er í container
 
-    for(var i = 0; i<allClassesToDisplay.length;i++){
-        var jogaClass = allClassesToDisplay[i]
-        displayClass(jogaClass)
+    for(var i = 0; i<allClassesParameter.length;i++){
+        var jogaClass = allClassesParameter[i]
+        displayClassFunction(jogaClass)
     }
 
  }
 
- var displayClass = function(jogaClass){
+ var displayClassFunction = function(jogaClassParameter){
     var divClass = "open_classes" 
-    if (jogaClass.type === "closed") {
+    if (jogaClassParameter.type === "closed") {
         divClass = "close_classes"
      }
     /** bæta við container-inn auka námskeiði */
-    container_all_classes.innerHTML += `
+    containerAllClassesElement.innerHTML += `
         <div class= ${divClass} >
-            <h1>${jogaClass.title}</h1>
-            <p> ${jogaClass.subText}</p>
-            <button>${jogaClass.button}</button>
+            <h1>${jogaClassParameter.title}</h1>
+            <p> ${jogaClassParameter.subText}</p>
+            <button>${jogaClassParameter.button}</button>
         </div>
         `   
 }
 
 // Kalla í fallið ef ég er á námskeiðasíðunni
-if (container_all_classes) {
-    displayAllClasses(allClasses)
+if (containerAllClassesElement !== null) {
+    displayAllClassesFunction(allClassesArrayVariable)
 }
 
 //XXXXXXXXXXXXXXXXXXXXXX  HÉR ERU KENNARAR  XXXXXXXXXXXXXXXXXXXXX
@@ -127,76 +127,76 @@ if (container_all_classes) {
 
 // Array fyrir Kennara
 
-var teachers = [
+var teachersArrayVariable = [
     {
-        img: `https://images/audur.png`,
-        Name: `Auður Bjarnadóttir`,
+        img: `images/audur.png`,
+        name: `Auður Bjarnadóttir`,
         description: `EIGANDI, KUNDALINI, MEÐGÖNGUJÓGA`,
     }
     ,
     {
-        img: `https://images/þorunn.png`,
-        Name: `ÞÓRUNN JÓNSDÓTTIR`,
+        img: `images/þorunn.png`,
+        name: `ÞÓRUNN JÓNSDÓTTIR`,
         description: `MÖMMU OG MEÐGÖNGUJÓGA`,
     }
     ,
     {
-        img: `https://images/annarin.png`,
-        Name: `ARNA RÍN JÓNSDÓTTIR`,
+        img: `images/annarin.png`,
+        name: `ARNA RÍN JÓNSDÓTTIR`,
         description: `MÖMMU OG MEÐGÖNGUJÓGA`,
     }
     ,
     {
-        img: `https://images/run.png`,
-        Name: `RÚN STEFÁNSDÓTTIR`,
+        img: `images/run.png`,
+        name: `RÚN STEFÁNSDÓTTIR`,
         description: `NÚVITUND GENG STREITU`,
     }
     ,
     {
-        img: `https://images/hildur.png`,
-        Name: `HILDUR ÖRNÓLFSDÓTTIR`,
+        img: `images/hildur.png`,
+        name: `HILDUR ÖRNÓLFSDÓTTIR`,
         description: `HATHA OG KUNDALIN JÓGA`,
     }
     ,
     {
-        img: `https://images/ester.png`,
-        Name: `ESTER ÞORVALDSDÓTTIR`,
+        img: `images/ester.png`,
+        name: `ESTER ÞORVALDSDÓTTIR`,
         description: `KUNDALINI og Jóga Nidra`,
     }
     ,
     {
-        img: `https://images/inga.png`,
-        Name: `INGA REYNISDÓTTIR`,
+        img: `images/inga.png`,
+        name: `INGA REYNISDÓTTIR`,
         description: `EMÖMMU OG MEÐGÖNGUJÓGA`,
     }
     ,
     {
-        img: `https://images/rut.png`,
-        Name: `Rut Gunnarsdóttir`,
+        img: `images/rut.png`,
+        name: `Rut Gunnarsdóttir`,
         description: `MJÚKT JÓGA OG JÓGA NIDRA `,
     }
     ,
     {
-        img: `https://images/birgir.png`,
-        Name: `BIRGIR JÓAKIMSSON`,
+        img: `images/birgir.png`,
+        name: `BIRGIR JÓAKIMSSON`,
         description: `KARLAJÓGA`,
     }
     ,
     {
-        img: `https://images/erna.png`,
-        Name: `ERNA ARADÓTTIR `,
+        img: `images/erna.png`,
+        name: `ERNA ARADÓTTIR `,
         description: `KUNDALINI OG JÓGA NIDRA`,
     }
     ,
     {
-        img: `https://images/edda.png`,
-        Name: `EDDA GUNNARSDÓTTIR`,
+        img: `images/edda.png`,
+        name: `EDDA GUNNARSDÓTTIR`,
         description: `MEÐGÖNGU OG MÖMMU JÓGA`,
     }
     ,
     {
-        img: `https://images/bara.png`,
-        Name: `BÁRA GUÐNADÓTTIR`,
+        img: `images/bara.png`,
+        name: `BÁRA GUÐNADÓTTIR`,
         description: `MJÚKT JÓGA OG JÓGA NIDRA`,
     }
       
@@ -204,7 +204,42 @@ var teachers = [
 ] // array - kennarar
 
 
-var container_all_teachers = document.getElementById("container_all_teachers")
+var containerAllTeachersElement = document.getElementById("container_all_teachers")
+
+var displayAllTeachersFunction = function(allTeachersArrayParameter) {
+     // Ef elementið er til á síðunni þá skrifa út alla kennara
+    if (containerAllTeachersElement === null) {
+        return
+     }
+
+    containerAllTeachersElement.innerHTML= ""; // hérna tæmi ég containerinn
+
+
+    for( var i = 0; i<allTeachersArrayParameter.length; i++){
+        var teacher = allTeachersArrayParameter[i]
+        displayTeacherFunction(teacher)
+    }
+}
+
+var displayTeacherFunction = function(teacherParameter) {
+    // console.log(teacherParameter) athuga 
+    var teacherHtmlVariable = `
+    <div class="teachers_container">
+        <img class=image src="${teacherParameter.img}" alt="teacher">
+        <h1>${teacherParameter.name}</h1>
+        <p>${teacherParameter.description}</p>
+    </div>
+    `
+    containerAllTeachersElement.innerHTML += teacherHtmlVariable
+}
+ // debugger
+displayAllTeachersFunction(teachersArrayVariable)
+
+
+
+
+
+
 
 
 
