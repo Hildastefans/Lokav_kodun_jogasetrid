@@ -29,7 +29,7 @@ var searchInput = document.getElementById ("myInputSearch")
 
 var AllClasses = [
     {
-        title: "Kundalini jóga",
+        title: "Kundalini jógas",
         subText: "Kundalini jóga er stundum kallað móðir alls jóga. Það er markvisst jógakerfi með eflandi jóga- og öndunaræfingum, hugleiðslu, möntrum og slökun. Unnið er að því að því að lyfta orkunni upp, bæta jafnvægi orkustöðva og víkka vitund okkar.",
         button: "Sjá nánar",
     }
@@ -151,7 +151,7 @@ var makeNewclass = function() {
 
 // Array fyrir Kennara
 
-var AllClasses = [
+var teachers = [
     {
         img: `https://images/audur.png`,
         Name: `Auður Bjarnadóttir`,
@@ -225,7 +225,7 @@ var AllClasses = [
     }
       
 
-] // array af námskeiðum
+] // array - kennarar
 
 
 
@@ -270,13 +270,13 @@ var onClickOpenSearch = function() {
 
 var onSearchInputInput = function() {
     var searchText = searchInput.value.toLowerCase()
-    var cardsResult = []
+    var AllClassesResult = []
     // Fara í gegnum kortin og setja í leitarniðurstöðu array þau sem passa
-    for(i=0; i<cards.length; i++) {
-        var card = cards[i]
-        var cardTitle = card.title.toLowerCase()
-        var buttonText1 = card.buttonText1.toLowerCase()
-        var buttonText2 = card.buttonText2.toLowerCase()
+    for(i=0; i<classes.length; i++) {
+        var AllClasses = AllClasses[i]
+        var ClassesTitle = AllClasses.title.toLowerCase()
+        var button = AllClasses.button.toLowerCase()
+        
 
         if (cardTitle.startsWith(searchText) 
             || buttonText1.includes(searchText)
