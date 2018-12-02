@@ -1,0 +1,1443 @@
+
+/********************************************** Forsíða *********************************************************/
+
+*{
+	font-family: Roboto, sans-serif !important;
+}
+
+header{
+	width: 100%;
+	position: absolute;
+    top:0;
+    z-index: 17;    
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav.logo-column{
+    padding-left: 10px
+}
+.nav_inner a{
+    color:white;
+}
+
+.jogasetur_logo{
+    height: 88px;
+}
+
+nav.nav_container {
+    width: 100%;
+    padding-top: 24px;
+    min-width: 650px;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin: 0 auto;
+    /* text-transform: uppercase; */
+    border: none;
+    z-index: 9999
+}
+
+nav.nav_container .nav_inner{
+    padding-top: 10px;
+    display: flex;
+    z-index: 99;
+    padding-left: 390px
+}
+
+
+nav.nav_container ul {
+  padding: 0;
+  display: flex; 
+}
+
+nav.nav_container ul li {
+  padding: 1em;
+  list-style: none;
+  color:white;
+  font-family: roboto, san serif;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+nav.nav_container .nav_inner a {
+  padding: .3em;
+  padding-left:.7em;
+  padding-right:.7em;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+
+/* hefur áhrifa á logo staðsetningu */
+nav.nav_container{
+    width: 95%;
+
+}
+  
+/* hér er hero mynd, texti og 3 buttons */
+
+  
+.hero_container {
+    background-image: url("../images/hero_image_1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+.hero_container:after {
+
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    }
+
+.hero_content {
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 17;
+}
+  
+.hero_content h1 {
+    color: #fff;
+    font-weight: 100;
+    font-size: 88px;
+    letter-spacing: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+    z-index: 15;
+ }
+  
+.hero-buttons {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hero_buttons button{
+    background-color: transparent;
+    color: rgb(255, 255, 255); 
+    width: 248px;
+    height: 56px;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 16px;
+}
+
+.container button{
+    border-color: white;
+    border-spacing: 24px;
+}
+
+/* hér endar hero mynd, texti og 3 buttons */
+
+
+
+/* texti undir forsíðu */
+
+.text_after_hero h2{
+    width: 100%;
+    /* height: 180px; */
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 1.7;
+    padding-bottom: 32px;
+    padding-top: 32px; 
+}
+/* hér byrja box undir hero mynd / forsíðu  */
+
+.gutter{
+    padding: 0px, 24px;
+    z-index: 2
+}
+
+.container_box_forsida {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+    position: relative;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    max-width: 1392px;
+    margin: 0 auto;  
+}
+
+.box_3_4_5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1392px;
+    margin: 48px auto 0;
+}
+
+.box_3_4_5 .box{
+    background-color: #E2DEDD;
+    width: 100%;
+    max-width: 448px;   
+}
+
+.box_3_4_5 img{
+    /*width: 448px;*/
+    height: 475px;
+}
+
+.box_3_4_5 h3{
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    width: 448px;
+    padding-top: 16px;
+}
+.box_3_4_5 p{
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 22px;
+    text-align: center;
+    width: 432px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+}
+
+.box_1{
+    background-image: url(../images/namskeid_ibodi_.png);
+    height: 544px;
+    width: 919px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_1 img{
+    width: 100%;
+    height: auto;   
+}
+
+.container_box_forsida h2{
+    font-size: 32px;
+    font-weight: 100;
+}
+
+.box_1 button{
+    background-color: transparent;
+    color: #E2DEDD;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    height: 72px;
+    width: 600px;
+    z-index: 10;  
+}
+
+.time_container{
+    
+    background-color: #584957;
+    color: #E2DEDD;
+    min-width: 448px;
+    padding-top: 24px;
+    
+
+}
+.time_container h1{
+    font-size: 24px;
+    font-weight: 200;
+    text-transform: uppercase; 
+}
+
+.top_container{
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+.top_container ul{
+    /*display: flex; 
+    flex-direction: row; */
+    justify-content: space-between; 
+    margin: 0 auto; 
+}
+
+.buttom_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto; 
+}
+
+.line{
+    border-bottom: 1px solid white;
+    height: 48px;
+
+}
+
+.time_container .selected_date_border{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.line span{
+    font-size: 16px;
+    
+
+}
+.bottom_container .class_time .line.first{
+    border-top: 1px solid white;
+
+}
+
+
+
+/* hér byrjar fréttabréf  */
+
+.frettabref_wrapper{
+    height: 200px;
+    width: 100%;
+    background-color: #E2DEDD;
+    margin-top: 88px;
+    margin-bottom: 88px;
+    display: flex;
+    flex-direction: column;
+}
+
+.frettabref_wrapper h2{
+    font-size: 32px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: #584957;
+    padding-top: 32px;
+    text-align: center;
+}
+
+.frettabref_wrapper p{
+    background-color: #E2DEDD;
+    font-size: 16px;
+    font-weight: 100;
+    padding-top: 10px;
+    padding-bottom: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.frettabref_wrapper .sign-up{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.frettabref_wrapper form{
+    margin: 0 0 100px;
+}
+
+.frettabref_wrapper form input{
+    width: 40%;
+    padding-left: 8px;
+    font-size: 16px;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+
+.sign-up button{
+    font-family: roboto, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    width: 20%;
+    color: white;
+    background-color: #584957;
+
+}
+
+
+/* hér byrjar footer  */
+
+footer{
+    height: 192px; 
+    background-color:#584957;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.logo_email{
+    color: #F4F0F0;
+    line-height: 3;
+    text-align: center;
+}
+
+.logo_email h3{
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 16px;
+        
+}
+    
+
+.address{
+    color: #E2DEDD;
+    bottom: 0;
+    font-size: 16px;
+    
+}
+.address p{
+    line-height: 1.5;
+    font-weight: 200;
+    font-size: 16px;
+    
+}
+.address h3{
+    line-height: 3.5;
+    font-size: 16px;
+    font-weight: 200;
+    
+}
+.social_media{
+    margin-top: 95px;
+
+}
+
+
+
+
+/********************************************** STAKT NÁMSKEIÐ *********************************************************/
+
+.background_image {
+
+    background-image: url(../images/staktnamskeid.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.background_image:after {
+
+    content: "";
+    height: 60vh;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.background_image h1 {
+    color: #F4F0F0;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 100;
+    font-size: 88px;
+    letter-spacing: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+    z-index: 15;
+    margin-top:200px;
+ }
+ .gutter{
+     padding:24px;
+ }
+
+ .information{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin:0 auto;
+     padding-top: 96px;
+     width: 100%;
+ }
+
+ .description_container{
+     
+ }
+
+
+ .description_container h1{
+    font-size: 48px;
+    letter-spacing: 4px;
+    font-size: 48px;
+    padding-bottom: 24px;
+
+ }
+
+ .description_container p{
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 1.8;
+    letter-spacing: 2px;
+    padding-bottom: 52px;
+    
+    
+}
+.description_container{
+    width: 40%;
+  
+
+}
+
+.description_container_2{
+    width: 684px;
+    
+    
+}
+
+.description_container_2 .description_content{
+    background-color:#584957;
+    padding-top: 16px;
+}
+
+.description_container_2 h1{
+    font-size: 32px;
+    font-weight: 400;
+    color:#F4F0F0;
+    letter-spacing: 4px;
+    margin: 24px;
+    text-transform: uppercase;
+   
+}
+.description_container_2 h3{
+    font-size: 24px;
+    font-weight: 200;
+    color:#F4F0F0;
+    letter-spacing: 1;
+    margin: 24px;
+    line-height: 1.9;
+    padding-bottom: 24px;   
+}
+.description_container_2 h3 span{
+    font-size: 24px;
+    font-weight: 700;
+  
+}
+
+.info_line{ 
+    border-bottom: 2px solid #F4F0F0;
+    width: 573px;
+    margin-left: 24px;
+    
+
+
+}
+.description_container_2 h2{
+    font-size: 24px;
+    font-weight: 300;
+    color: #F4F0F0;
+    letter-spacing: 1;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    margin-right: 8px; 
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F4F0F0;
+    width: 100%; 
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F4F0F0;
+    width: 100%; 
+}
+
+.price_container_left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 32px auto;
+    /* padding-left: 32px; */
+    line-height: 2.3;
+    width: 30%;
+
+
+}
+
+.price_container_left h1{
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2;
+    margin-left: 32px;
+    
+}
+.price_container_left h4{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;   
+}
+
+.price_container_right h4{
+    font-size: 16px;
+    font-weight: 200;
+    text-transform: uppercase; 
+}
+
+.price_left2 h4{
+    text-transform: uppercase;
+    margin-left: 24px;
+    font-weight: 600;
+}
+.price_right1 h4{
+    text-transform: uppercase;
+    margin-left: 24px;
+    font-weight: 300;
+}
+
+.price_left1 h4{
+    text-transform: uppercase;
+    margin-left: 24px;
+    font-weight: 300;
+}
+
+.price_container_right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 32px auto;
+    line-height: 2;
+    width: 30%;
+    margin-left: 100px;
+}
+
+.price_container_right1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 32px auto;
+    line-height: 2;
+   
+}
+
+.price_container_right2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 32px auto;
+    line-height: 2;
+    
+}
+
+
+span {
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+.class_info{
+    background-color: #584957;
+    display: flex;
+    flex-direction: row;
+    margin-left: -24px;
+    padding-left: 10px;   
+}
+
+.confirm_hatha{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    width: 274px;
+    color: #584957;
+    height: 48px;
+    background-color: transparent;
+    margin-bottom: 48px;
+}
+
+.confirm_hatha:hover {
+    background-color: #584957;
+    color: #F4F0F0;
+}
+
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    height: 180px;
+}
+
+.class_info .text{
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 10px;
+    color: #F4F0F0;
+    line-height: 2.1;
+    height: 180px;
+}
+.color_open{
+    background-color: #8C288C;
+    bottom: 0 auto;
+    width: 8px;
+    height: 22px;
+    margin-top: 25px;
+    
+}
+.first_time{
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price_name_note{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price h1{
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-left: 24px;
+}
+.price_name_note{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price h5{
+    padding-top: 200px;
+    width: 100%;  
+}
+
+
+
+
+/********************************************** Öll námskeið *********************************************************/
+
+
+
+.opening_closing_boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    height: 48px;
+    margin: 24px; 
+    margin-bottom: 48px;   
+
+}
+.opening_closing_boxes .opening{
+    border-right: 16px solid #8C288C;
+
+}
+
+.opening_closing_boxes .close{
+    border-right: 16px solid #444242;
+
+}
+
+
+
+.opening_closing_boxes button{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    width: 200px;
+    color: #584957;
+    height: 48px;
+    background-color: transparent;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+
+}
+.all:hover {
+    background-color: #584957;
+    color: #F4F0F0;
+}
+.opening:hover {
+    background-color: #8C288C;
+    color: #F4F0F0;
+}
+.close:hover {
+    background-color: #444242;
+    color: #F4F0F0;
+}
+
+.price_button_right:hover{
+    background-color: #584957;
+    color: #F4F0F0;
+}
+
+section.container_all_classes{
+    width: 100%;
+    min-width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+
+}
+
+.open_classes{
+    width: 416px;
+    height: 360px;
+    background-color: #F4F0F0;
+    border-right: 24px solid #8C288C;
+    margin-left: 24px;
+    margin-bottom: 64px;
+   
+
+}
+.close_classes{
+    width: 416px;
+    height: 360px;
+    background-color: #F4F0F0;
+    border-right: 24px solid #444242;
+    margin-left: 24px;
+    margin-bottom: 64px;
+
+    
+}
+
+.open_classes h1{
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-left: 20px;
+    
+}
+.close_classes h1{
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+.open_classes p{
+    font-size: 16px;
+    width: 80%;
+    letter-spacing: 1.8px;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #584957;
+    padding-left: 20px;
+    line-height: 25px;
+   
+}
+.close_classes p{
+    font-size: 16px;
+    width: 80%;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #584957;
+    padding-left: 20px;
+    line-height: 25px;
+   
+}
+
+.close_classes button{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    width: 200px;
+    color: #584957;
+    height: 48px;
+    background-color: transparent;
+    margin-top: 32px;
+    margin-left: 22px;
+    text-transform: uppercase;
+ 
+}
+
+
+.open_classes button{
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    width: 200px;
+    color: #584957;
+    height: 48px;
+    background-color: transparent;
+    margin-top: 32px;
+    margin-left: 22px;
+}
+
+.open_classes button:hover {
+    background-color: #584957;
+    color: #F4F0F0;
+}
+
+.close_classes button:hover {
+    background-color: #584957;
+    color: #F4F0F0;
+}
+
+span .purple_color_line{
+    border-bottom: 2px solid #8C288C;
+    height: 20px;
+    width: 300px;
+    
+}
+span .dark_color_line{
+    border-bottom: 2px solid #444242;
+    height: 20px;
+    width: 300px;
+    
+}
+
+.container_new_members{
+    width: 100%;
+    background-color: #F4F0F0;
+    color: #584957;
+    height: 80px;
+    margin-top:80px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 32px;
+}
+.container_new_members h1{
+    font-size: 24px;
+    letter-spacing: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+
+}
+.container_new_members:hover{
+    background-color: #584957;
+    color: #F4F0F0;
+}
+
+/********************************************** Kennarar *********************************************************/
+
+
+
+section.container_all_teachers{
+    width: 100%;
+    min-width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+
+.teachers_container{
+    width: 328px;
+    /* height: 420px; */
+    color: #584957;
+    margin-left: 24px;
+    margin-bottom: 48px;
+    /* margin-top: 80px; */
+}
+
+.teachers_container img{
+    width: 330px;
+    height: 320px;
+    
+    
+}
+
+.teachers_container h1{
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    text-transform: uppercase;  
+}
+
+.teachers_container p{
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 16px;
+    letter-spacing: 1.1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;   
+}
+/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxxxxxxxxxxxx*/
+.teachers_container img:hover {
+    background-color: #8C288C;
+}
+/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxx*/
+.teachers_container img:hover  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.7s;
+}
+
+
+
+
+
+/* @MEDIA XXXXXXXXXXXX  @MEDIA XXXXXXXXXXXX @MEDIA  XXXXXXXXXXXX @MEDIA */
+@media screen and (max-width: 500px) 
+{
+
+    
+    .nav_container .nav_inner ul{
+        display: none;
+    }
+
+    .jogasetur_logo {
+        height: 88px;
+        margin: 0 auto;
+    }
+
+    nav.nav_container {
+        width: 100%;
+        padding-top: 24px;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        border: none;
+        min-width: auto;
+        z-index: 9999; 
+    }
+
+    nav.nav_container .nav_inner{
+        padding-top: 10px;
+        display: flex;
+        z-index: 99;
+        padding-left:0;
+        padding-right:10px;   
+    }
+
+    .gutter{
+        padding: 24px;
+    }
+
+    .hamburger{
+        display: block;
+        margin-right: 40px;
+        
+    }
+
+    .logo-column{
+        padding-left: 16px;
+    }
+
+
+    .container_box_forsida{
+       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        font-size: 32px;
+        font-weight: 100;
+        text-align: center;
+        width: 100%;
+        max-width: 1392px;
+        margin: 0 auto;
+     }
+
+    .box_1 {
+        background-image: url(../images/namskeid_ibodi_.png);
+        height: 450px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    .time_container {
+        background-color: #584957;
+        color: #E2DEDD;
+        padding-top: 24px;
+        width: 100%;
+        min-width: auto;
+    }
+    
+
+    .box_1 button {
+        background-color: transparent;
+        color: #E2DEDD;
+        font-size: 16;
+        font-weight: 200;
+        text-shadow: 2px 2px 4px #000000;
+        line-height: 32px;
+        letter-spacing: 10;
+        text-transform: uppercase;
+        height: 96px;
+        z-index: 10;
+        width: 300px;
+        margin-top: 115px;
+    }
+    
+    .hero_content h1{
+        font-size: 56px;
+        margin-top: 156px;
+    }
+
+    .text_after_hero h2{
+        font-size: 16px;
+    }
+
+    .hero_buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        /* height: 192px; */
+        background-color: #584957;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .container_footer{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-between;
+    }
+
+    .address{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom:40px;
+    }
+
+    .address h3 {
+        line-height: 3.5;
+        font-size: 24px;
+        font-weight: 200;
+    }
+
+    .logo_email{
+        color: #F4F0F0;
+        line-height: 3;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .social_media{
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .box_3_4_5 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 88%;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .box_3_4_5 img{
+        height: 300px;
+        width: 100%;
+    }
+
+    .box_3_4_5 p{
+        width: 100%
+    }
+
+
+    .box_3_4_5 .box {
+        width: 100%;
+        max-width: none;
+    }
+
+    .box_3_4_5 .box h3{
+        width: 100%;   
+    }
+
+    .frettabref_wrapper{
+        height: 224px;
+        display: block;
+    }
+
+    .sign-up button{
+        width: 48%;
+    }
+
+    .frettabref_wrapper p {
+        line-height: 24PX;
+    }
+
+
+    .frettabref_wrapper form input {
+        width: 92%;
+        padding-left:none;
+    }
+
+    .frettabref_wapper form input {
+        width: 100%;
+        letter-spacing: 24px;
+    }
+
+    .frettabref_wrapper .sign-up {
+        width: 92%;
+    }
+
+    .sign-up button {
+        width: 28%;
+    }
+   
+    /*  STAKT NÁMSKEIÐ BYRJAR HÉR  */
+
+    .background_image h1 {
+        font-size: 58px;
+        text-shadow:0.5px 0.5px 0.5px #000000;
+    }
+
+    .information{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-top: 80px;
+        width: 100%;
+    }
+
+    .description_container{
+        width: 100%;
+    }
+
+    .description_container h1{
+        font-size: 48px;
+    }
+
+    .confirm_hatha{
+        margin: 0 auto;
+        width: 100%; 
+        margin-bottom: 24px;
+    }
+
+    .class_info{
+        margin-left: none;
+        padding-left: none;
+        margin-bottom: 24px;
+    }
+
+    .class_info .text{
+
+        font-size: 20px;
+        line-height: 2.5;
+    }
+
+    .description_container_2{
+        width: 100%;
+    }
+
+    .description_container_2 h3{
+        padding-bottom: none;
+        letter-spacing: 0.6px;
+    }
+
+    .color_open{
+        height: 40px;
+        margin-top:-66px;
+    }
+
+    .description_container_2 h2{
+        padding-bottom: none;
+        margin-left: 4px;
+        margin-top: auto; 
+    }
+        
+    .description_content .first_time{
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+
+    }
+
+
+    .first_time h2{
+        padding-left:25px;
+        line-height: 48px;
+
+    }
+
+    .info_line{
+        width: 315px;
+    }
+
+    .jogamynd{
+        width: 100%;
+    }
+
+
+    .information{
+        padding-top:40px;
+    }
+
+    
+    .price{
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+        margin-bottom: 48px;   
+    }
+
+    .price_container_left{
+    
+        padding-left: none;
+        width: 100%;      
+    }
+
+    .price_container_right{
+
+        width: 100%;
+        margin-left: none;
+        margin-left: 0px;
+    }
+
+
+    .price_container_right .price_left2{
+        width: 50%;
+    }
+
+    .price_container_left .price_left2{
+        width: 50%;
+    }
+
+    .price_left2 span {
+        font-size: 8px;
+        display: none;
+        margin: 0 auto;
+    }
+
+    .price_name_note h5{
+        display: none;
+    }
+
+
+ /*  KENNARAR BYRJA HÉR  */
+
+
+    section.container_all_teachers{
+        min-width: auto;
+        margin-top: 48px;
+    }
+    
+    .teachers_container{
+        flex-direction: column;
+        margin-left: 0px;
+        width: 100%;
+       
+         
+    }
+    
+    .teachers_container img{
+        width: 100%;
+
+    }
+
+    /*  ÖLL NÁMSKEIÐ BYRJA HÉR  */
+
+    .opening_closing_boxes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        height: auto;
+        
+
+    }.opening_closing_boxes button{
+
+        width: auto;
+        margin-bottom: 15px;
+    }
+
+    .container_all_classes{
+
+        width: auto;
+        height: auto;
+        margin-left: 0px;
+    }
+    .open_classes button{
+        margin: 15px auto;
+        margin-left: 20px;
+    }
+
+
+    .open_classes{
+        width: auto;
+        height: auto;
+        margin-left: auto;
+    }
+
+    .open_classes p{
+        width: auto;
+    }
+
+    .close_classes{
+        width: auto;
+        height: auto;
+        margin-left: auto;
+    }
+
+    .close_classes button{
+        margin: 15px auto;
+        margin-left: 20px;
+    }
+
+
+   
+
+}
+/* @MEDIA ENDAR HÉR XXXXXXXXX @MEDIA ENDAR HÉR  */
+
