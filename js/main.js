@@ -122,6 +122,53 @@ if (containerAllClassesElement !== null) {
     displayAllClassesFunction(allClassesArrayVariable)
 }
 
+var allClassesButtonElement = document.getElementById("all_classes_button")
+var openClassesButtonElement = document.getElementById("open_classes_button")
+var closeClassesButtonElement = document.getElementById("close_classes_button")
+
+
+var onAllClassesButtonClick = function(){
+    displayAllClassesFunction(allClassesArrayVariable)
+}
+var onOpenClassesButtonClick = function(){
+    var openClassesVariable = filterClassesByTypeFunction("open")
+    displayAllClassesFunction(openClassesVariable)
+}
+
+var onCloseClassesButtonClick = function(){
+    var closeClassesVariable = filterClassesByTypeFunction("closed")
+    displayAllClassesFunction(closeClassesVariable)
+}
+
+var filterClassesByTypeFunction = function(typeParameter) {
+    var filteredClassesResultVariable = []
+    // Fara í gegnum classes og setja í leitarniðurstöðu þau sem eru með rétt type
+    for(i=0; i<allClassesArrayVariable.length; i++) {
+        var classVariable = allClassesArrayVariable[i]
+
+        if (classVariable.type === typeParameter) {
+            // Námskeið sem uppfyllir leit bætt við leitarniðurstöður
+            filteredClassesResultVariable.push(classVariable)
+        }
+    }
+
+    return filteredClassesResultVariable
+}
+
+allClassesButtonElement.onclick = onAllClassesButtonClick
+openClassesButtonElement.onclick = onOpenClassesButtonClick
+closeClassesButtonElement.onclick = onCloseClassesButtonClick
+
+
+// Kalla í fallið ef ég er á námskeiðasíðunni
+if (allClassesButtonElement !== null) {
+    allClassesButtonElement.onclick = onAllClassesButtonClick
+    openClassesButtonElement.onclick = onOpenClassesButtonClick
+    closeClassesButtonElement.onclick = onCloseClassesButtonClick
+}
+
+
+
 //XXXXXXXXXXXXXXXXXXXXXX  HÉR ERU KENNARAR  XXXXXXXXXXXXXXXXXXXXX
 
 
