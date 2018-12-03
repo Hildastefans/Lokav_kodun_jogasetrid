@@ -579,11 +579,26 @@ for(var i = 0; i<timetableArray.length; i++){
 }
 
 var moveDayNumber = 0;
+var weekdayPosition = 0;
 timetableElement.style.left = "0px";
-timetableArray.push(timetableArray[0])
+
 var changeDay = function(direction){
-    console.log("hallo")
-    moveDayNumber += 448 * direction;
+    console.log(direction)
+    weekdayPosition += direction
+    
+    if (weekdayPosition === -7) {
+        // Komin á laugardag, fara áfram á sunnudag
+        weekdayPosition = 0
+        moveDayNumber = 0;
+    } else if (weekdayPosition === 1) {
+        // Á sunnudegi, fara til baka á laugardag
+        weekdayPosition = -6
+        moveDayNumber += 448 * weekdayPosition;
+    } else {
+        // Fara einn dag áfram eða til baka
+        moveDayNumber += 448 * direction;
+    }
+
     timetableElement.style.left = moveDayNumber + "px";
 
     if(moveDayNumber <= timetableArray.length*448* -1){
@@ -598,6 +613,11 @@ var changeDay = function(direction){
   
     }
 }
+
+// Upphafsstilla á daginn í dag
+var today = new Date()
+var dayOfWeek = today.getDay()
+changeDay(-dayOfWeek)
 
 
 
