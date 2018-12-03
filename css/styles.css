@@ -83,7 +83,8 @@ nav.nav_container{
 
   
 .hero_container {
-    background-image: url("../images/hero_image_1.jpg");
+    /*background-image: url("../images/hero_image_1.jpg");*/
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/hero_image_1.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -95,14 +96,14 @@ nav.nav_container{
 
   }
 
-.hero_container:after {
+/*.hero_container:after {
 
     content: "";
     height: 100%;
     width: 100%;
     position: absolute;
     background-color: rgba(0,0,0,0.3);
-    }
+    }*/
 
 .hero_content {
     padding-top: 130px;
@@ -213,7 +214,7 @@ nav.nav_container{
     font-weight: 100;
     line-height: 22px;
     text-align: center;
-    width: 432px;
+    width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
 
@@ -239,6 +240,19 @@ nav.nav_container{
     font-size: 32px;
     font-weight: 100;
 }
+/* þessi var bætt við í ATH á eftir að stíla */
+.time_container_3{
+    min-width: 448px;
+    position: relative;
+    overflow: hidden;
+    width: 448px;
+    background-color: #584957;
+    color: #E2DEDD;
+    min-width: 448px;
+    padding-top: 24px;
+
+
+}
 
 .box_1 button{
     background-color: transparent;
@@ -253,14 +267,17 @@ nav.nav_container{
 }
 
 .time_container{
+    display:flex;
+    position: absolute;
+    transition: all 1s;
     
-    background-color: #584957;
-    color: #E2DEDD;
-    min-width: 448px;
-    padding-top: 24px;
-    
-
 }
+
+.timeTableContainer_2{
+    min-width: 448px;
+    
+}
+
 .time_container h1{
     font-size: 24px;
     font-weight: 200;
@@ -480,10 +497,6 @@ footer{
      margin:0 auto;
      padding-top: 96px;
      width: 100%;
- }
-
- .description_container{
-     
  }
 
 
@@ -979,9 +992,13 @@ section.container_all_teachers{
     width: 328px;
     /* height: 420px; */
     color: #584957;
-    margin-left: 24px;
+    margin-right: 24px;
     margin-bottom: 48px;
     /* margin-top: 80px; */
+}
+
+.teachers_container.last{
+    margin-right: 0;
 }
 
 .teachers_container img{
@@ -1009,14 +1026,14 @@ section.container_all_teachers{
     text-transform: uppercase;   
 }
 /*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxxxxxxxxxxxx*/
-.teachers_container img:hover {
-    background-color: #8C288C;
-}
+/*.teachers_container img:hover {
+    background-color: #8C288C;*/
+
 /*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxx*/
-.teachers_container img:hover  {
+/*.teachers_container img:hover  {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.7s;
-}
+}*/
 
 
 
@@ -1062,8 +1079,8 @@ section.container_all_teachers{
 
     .hamburger{
         display: block;
-        margin-right: 40px;
-        
+        margin-right: 16px;
+        height: 24px;
     }
 
     .logo-column{
@@ -1375,15 +1392,15 @@ section.container_all_teachers{
     
     .teachers_container{
         flex-direction: column;
-        margin-left: 0px;
-        width: 100%;
-       
-         
+        margin-right: 0px;
+        width: 100% !important;
+        height: auto;
+           
     }
     
     .teachers_container img{
         width: 100%;
-
+        height: 320px;
     }
 
     /*  ÖLL NÁMSKEIÐ BYRJA HÉR  */
@@ -1393,10 +1410,10 @@ section.container_all_teachers{
         flex-direction: column;
         justify-content: space-between;
         margin: 0 auto;
-        height: auto;
-        
+        height: auto;  
+    }
 
-    }.opening_closing_boxes button{
+    .opening_closing_boxes button{
 
         width: auto;
         margin-bottom: 15px;
@@ -1408,6 +1425,7 @@ section.container_all_teachers{
         height: auto;
         margin-left: 0px;
     }
+
     .open_classes button{
         margin: 15px auto;
         margin-left: 20px;
