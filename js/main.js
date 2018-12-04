@@ -552,17 +552,25 @@ var dayOfWeek = today.getDay()
 changeDay(-dayOfWeek)
 
 
-// þetta er fyrir menu DG --------- nota líklega frekar en minn
 
-/*
+
+
+
+
+
+
+
+// þetta er fyrir menu mobile --------- 
+
 const navMenuButtonElement = document.getElementById('nav-button')
 const closeNavMenuButtonElement = document.getElementById('close-nav-button')
 const navMenuElement = document.getElementById('nav-menu')
 navMenuButtonElement.addEventListener('click', onNavMenuButtonClick)
 closeNavMenuButtonElement.addEventListener('click', onCloseNavMenuButtonClick)
 
-const activeClass = 'expanded'
+var activeClass = 'expanded'
 function onNavMenuButtonClick(e) {
+    console.log('click')
   navMenuButtonElement.classList.add(activeClass)
   navMenuElement.classList.add(activeClass)
 }
@@ -571,7 +579,6 @@ function onCloseNavMenuButtonClick(e) {
   navMenuButtonElement.classList.remove(activeClass)
   navMenuElement.classList.remove(activeClass)
 }
-*/
 
 
 
@@ -579,49 +586,6 @@ function onCloseNavMenuButtonClick(e) {
 
 
 
-
-
-
-
-
-// MENU Í MOBLILE - EÐA VIRKNI Á HAMBURGER
-
-
-var burger = document.querySelector(".burger_container");
-var close = document.querySelector (".close");
-var menu = document.querySelector (".menu");
-var burgerLines = document.getElementsByClassName("burger");
-var navIsOpen = false;
-
-
-burger.onclick = function (){
-    if(!navIsOpen){
-    menu.classList.add("show-menu");
-    burgerLines[0].classList.add("tilt-right");
-    burgerLines[2].classList.add("tilt-left");
-    for (var i = 0; i < burgerLines.length; i++){
-        burgerLines[i].classList.add("change-to-x")
-    }
-    navIsOpen = true;
-}
-
-else{
-    menu.classList.remove("show-menu");
-    burgerLines[0].classList.remove("tilt-right");
-    burgerLines[2].classList.remove("tilt-left");
-    for (var i = 0; i < burgerLines.length; i++) {
-        burgerLines[i].classList.remove("change-to-x")
-    }
-    navIsOpen = false;
-    }
-}
-
-
-
-
-
-
-    
 
 
 

@@ -38,7 +38,7 @@ nav.nav_container {
     margin: 0 auto;
     /* text-transform: uppercase; */
     border: none;
-    z-index: 9999
+    z-index: 99;
 }
 
 nav.nav_container .nav_inner{
@@ -110,7 +110,7 @@ nav.nav_container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 17;
+    /*z-index: 17;*/
 }
   
 .hero_content h1 {
@@ -121,7 +121,7 @@ nav.nav_container{
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 32px;
-    z-index: 15;
+    /*z-index: 15;*/
  }
   
 .hero-buttons {
@@ -1057,22 +1057,13 @@ section.container_all_teachers{
 
 
 
-/* Þetta er fyrir nav bar */
+/* Þetta er fyrir mobile menu */
 
-
-/* ÞETTA ER DG
 #nav-menu > ul > li > button {
     display: none;
   }
-*/
 
-.hamburger_container{
-    display: none;
-}
 
-.menu_hamburger{
-    display: none;
-}
 
 
 
@@ -1104,7 +1095,7 @@ section.container_all_teachers{
         margin: 0 auto;
         border: none;
         min-width: auto;
-        z-index: 9999; 
+        z-index: 99;
     }
 
     nav.nav_container .nav_inner{
@@ -1508,8 +1499,8 @@ section.container_all_teachers{
         margin-top: 30px;
 }
 
-
-   /* Bæta þessum við inn í media DG
+/* þetta er menu bar fyrir mobile  */
+  
    #nav-menu {
     display: none;
   }
@@ -1526,6 +1517,8 @@ section.container_all_teachers{
     top: 0px;
     right: 0px;
     display: block;
+    width: 100%;
+    height: 100vh;
     background-color: #584957;
   }
 
@@ -1535,7 +1528,7 @@ section.container_all_teachers{
     display: block;
     height: 24px;
     width: 24px;
-    background-image: url('../images/hamburger.svg');
+    background-image: url('../images/close_menu.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
@@ -1545,15 +1538,16 @@ section.container_all_teachers{
   .hamburger {
     display: block;
     margin-right: 16px;
-    height: 24px;
-    width: 24px;
+    height: 40px;
+    width: 40px;
+    background-image: url('../images/hamburger.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
-    border: 0px;
+    border: 1px;
+    z-index: 500;
   }
 
-/*
 
 
 
@@ -1568,67 +1562,7 @@ section.container_all_teachers{
 
 
 
-/*XXXXXXXXXXXXXXXXXX  ÞETTA ER MINN BURGER Í MOBILE  XXXXXXXXXXXXXXXX*/
 
-.burger {
-
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 4px 0;
-    border-radius: 5px;
-    transition:all 2s;
-}
-
-.burger_container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 20px;
-    z-index: 3;
-}
-
-.burgerContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 20px;
-    z-index: 3;
-}
-
-.menu_hamburger{
-    right: 0px;
-    background-color: red;
-    position: absolute;
-    top:0px;
-    width: 0;
-    visibility: hidden;
-    width: 0;
-    height: 100%;
-    transition: all 1s ease-in-out;
-    z-index: -1;
-    
-
-}
-.close{
-    cursor: pointer;
-}
-
-.show-menu{
-    width: 100%;
-    visibility: visible;
-}
-
-.tilt-right {
-    transform:rotate(45deg);
-}
-
-.tilt-left {
-    transform:rotate(-45deg);
-}
-.change-to-x{
-    position: absolute;
-}
 
 
 
