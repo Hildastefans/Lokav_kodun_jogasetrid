@@ -552,8 +552,9 @@ var dayOfWeek = today.getDay()
 changeDay(-dayOfWeek)
 
 
-// þetta er fyrir menu 
+// þetta er fyrir menu DG --------- nota líklega frekar en minn
 
+/*
 const navMenuButtonElement = document.getElementById('nav-button')
 const closeNavMenuButtonElement = document.getElementById('close-nav-button')
 const navMenuElement = document.getElementById('nav-menu')
@@ -570,13 +571,23 @@ function onCloseNavMenuButtonClick(e) {
   navMenuButtonElement.classList.remove(activeClass)
   navMenuElement.classList.remove(activeClass)
 }
+*/
+
+
+
+
+
+
+
+
+
 
 
 
 // MENU Í MOBLILE - EÐA VIRKNI Á HAMBURGER
 
-/*
-var burger = document.querySelector(".burgerContainer");
+
+var burger = document.querySelector(".burger_container");
 var close = document.querySelector (".close");
 var menu = document.querySelector (".menu");
 var burgerLines = document.getElementsByClassName("burger");
@@ -603,7 +614,7 @@ else{
     }
     navIsOpen = false;
     }
-}*/
+}
 
 
 

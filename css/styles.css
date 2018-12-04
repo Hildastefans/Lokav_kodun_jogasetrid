@@ -43,12 +43,11 @@ nav.nav_container {
 
 nav.nav_container .nav_inner{
     padding-top: 10px;
+    display: flex;
     justify-content: flex-end;
     width: 100%;
-    z-index: 99;
-    
+    z-index: 99;  
 }
-
 
 nav.nav_container ul {
   padding: 0;
@@ -78,7 +77,6 @@ nav.nav_container .nav_inner a {
 /* hefur áhrifa á logo staðsetningu */
 nav.nav_container{
     width: 95%;
-
 }
   
 /* hér er hero mynd, texti og 3 buttons */
@@ -218,6 +216,7 @@ nav.nav_container{
     width: 448px;
     padding-top: 16px;
 }
+
 .box_3_4_5 p{
     font-size: 16px;
     font-weight: 100;
@@ -226,7 +225,6 @@ nav.nav_container{
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
-
 }
 
 .box_1{
@@ -249,6 +247,7 @@ nav.nav_container{
     font-size: 32px;
     font-weight: 100;
 }
+
 /* þessi var bætt við í ATH á eftir að stíla */
 .time_container_carousel{
     position: relative;
@@ -258,8 +257,6 @@ nav.nav_container{
     color: #E2DEDD;
     min-width: 448px;
     padding-top: 24px;
-
-
 }
 
 .box_1 button{
@@ -282,13 +279,11 @@ nav.nav_container{
 .time_container{
     display:flex;
     position: absolute;
-    transition: all 1s;
-    
+    transition: all 1s;  
 }
 
 .timeTableContainer_2{
-    min-width: 448px;
-    
+    min-width: 448px; 
 }
 
 .time_container h1{
@@ -301,6 +296,7 @@ nav.nav_container{
     font-size: 16px;
     padding-bottom: 40px;
 }
+
 .top_container ul{
     /*display: flex; 
     flex-direction: row; */
@@ -318,23 +314,19 @@ nav.nav_container{
 .line{
     border-bottom: 1px solid white;
     height: 48px;
-
 }
 
 .time_container .selected_date_border{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;  
 }
 
 .line span{
     font-size: 16px;
-    
-
 }
+
 .bottom_container .class_time .line.first{
     border-top: 1px solid white;
-
 }
 
 
@@ -431,32 +423,29 @@ footer{
 .logo_email h3{
     letter-spacing: 2px;
     font-weight: 300;
-    font-size: 16px;
-        
+    font-size: 16px;      
 }
     
-
 .address{
     color: #E2DEDD;
     bottom: 0;
-    font-size: 16px;
-    
+    font-size: 16px;   
 }
+
 .address p{
     line-height: 1.5;
     font-weight: 200;
-    font-size: 16px;
-    
+    font-size: 16px;  
 }
+
 .address h3{
     line-height: 3.5;
     font-size: 16px;
-    font-weight: 200;
-    
+    font-weight: 200;  
 }
+
 .social_media{
     margin-top: 95px;
-
 }
 
 
@@ -509,6 +498,7 @@ footer{
 .background_image {
 
     background-image: url(../images/staktnamskeid.jpg);
+    /*background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/hero_image_1.jpg");*/
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -541,6 +531,7 @@ footer{
     z-index: 15;
     margin-top:200px;
  }
+
  .gutter{
      padding:24px;
  }
@@ -554,13 +545,11 @@ footer{
      width: 100%;
  }
 
-
  .description_container h1{
     font-size: 48px;
     letter-spacing: 4px;
     font-size: 48px;
     padding-bottom: 24px;
-
  }
 
  .description_container p{
@@ -568,20 +557,15 @@ footer{
     font-weight: 300px;
     line-height: 1.8;
     letter-spacing: 2px;
-    padding-bottom: 52px;
-    
-    
+    padding-bottom: 52px;   
 }
+
 .description_container{
     width: 40%;
-  
-
 }
 
 .description_container_2{
-    width: 684px;
-    
-    
+    width: 684px;   
 }
 
 .description_container_2 .description_content{
@@ -596,8 +580,8 @@ footer{
     letter-spacing: 4px;
     margin: 24px;
     text-transform: uppercase;
-   
 }
+
 .description_container_2 h3{
     font-size: 24px;
     font-weight: 200;
@@ -607,17 +591,16 @@ footer{
     line-height: 1.9;
     padding-bottom: 24px;   
 }
+
 .description_container_2 h3 span{
     font-size: 24px;
     font-weight: 700;
-  
 }
 
 .info_line{ 
     border-bottom: 2px solid #F4F0F0;
     width: 573px;
     margin-left: 24px;
-
 }
 
 .description_container_2 h2{
@@ -641,7 +624,6 @@ footer{
     margin-bottom: 80px;
 }
 
-
 .price_container_left{
     display: flex;
     flex-direction: row;
@@ -650,8 +632,6 @@ footer{
     padding-top: 72px;
     line-height: 2.3;
     width: 100%;
-
-
 }
 
 .price_container_left h1{
@@ -659,9 +639,9 @@ footer{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2;
-    margin-left: 32px;
-    
+    margin-left: 32px;  
 }
+
 .price_container_left h4{
     font-size: 16px;
     font-weight: 600;
@@ -679,6 +659,7 @@ footer{
     margin-left: 24px;
     font-weight: 600;
 }
+
 .price_right1 h4{
     text-transform: uppercase;
     margin-left: 24px;
@@ -706,8 +687,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin: 32px auto;
-    line-height: 2;
-   
+    line-height: 2; 
 }
 
 .price_container_right2{
@@ -715,15 +695,13 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin: 32px auto;
-    line-height: 2;
-    
+    line-height: 2;  
 }
 
 
 span {
     font-size: 16px;
     font-weight: 300;
-
 }
 
 .class_info{
@@ -750,7 +728,6 @@ span {
     color: #F4F0F0;
 }
 
-
 .icon{
     display: flex;
     flex-direction: column;
@@ -767,14 +744,15 @@ span {
     line-height: 2.1;
     height: 180px;
 }
+
 .color_open{
     background-color: #8C288C;
     bottom: 0 auto;
     width: 8px;
     height: 22px;
-    margin-top: 25px;
-    
+    margin-top: 25px;  
 }
+
 .first_time{
     display: flex;
     flex-direction: row;
@@ -790,6 +768,7 @@ span {
     padding-top: 20px;
     padding-left: 24px;
 }
+
 .price_name_note{
     display: flex;
     flex-wrap: wrap;
@@ -814,16 +793,14 @@ span {
     height: 48px;
     margin: 24px; 
     margin-bottom: 48px;   
-
 }
+
 .opening_closing_boxes .opening{
     border-right: 16px solid #8C288C;
-
 }
 
 .opening_closing_boxes .close{
     border-right: 16px solid #444242;
-
 }
 
 .opening_closing_boxes button{
@@ -837,16 +814,18 @@ span {
     background-color: transparent;
     margin-bottom: 48px;
     text-transform: uppercase;
-
 }
+
 .all:hover {
     background-color: #584957;
     color: #F4F0F0;
 }
+
 .opening:hover {
     background-color: #8C288C;
     color: #F4F0F0;
 }
+
 .close:hover {
     background-color: #444242;
     color: #F4F0F0;
@@ -867,8 +846,6 @@ section.container_all_classes{
     justify-content: flex-start;
     margin: 0 auto;
     flex-wrap: wrap;
-
-
 }
 
 .open_classes{
@@ -878,18 +855,15 @@ section.container_all_classes{
     border-right: 24px solid #8C288C;
     margin-left: 24px;
     margin-bottom: 64px;
-   
-
 }
+
 .close_classes{
     width: 416px;
     height: 360px;
     background-color: #F4F0F0;
     border-right: 24px solid #444242;
     margin-left: 24px;
-    margin-bottom: 64px;
-
-    
+    margin-bottom: 64px;  
 }
 
 .open_classes h1{
@@ -946,7 +920,6 @@ section.container_all_classes{
     margin-top: 32px;
     margin-left: 22px;
     text-transform: uppercase;
- 
 }
 
 
@@ -1079,70 +1052,27 @@ section.container_all_teachers{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.7s;
 }*/
+
+
+
+
+
 /* Þetta er fyrir nav bar */
 
-/*XXXXXXXXXXXXXXXXXX  ÞETTA ER MINN BURGER Í MOBILE  XXXXXXXXXXXXXXXX*/
 
-/*.burger {
-
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 4px 0;
-    border-radius: 5px;
-    transition:all 2s;
-}
-
-.burgerContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 20px;
-    z-index: 3;
-}
-
-.menu{
-    right: 0px;
-    background-color: red;
-    position: absolute;
-    top:0px;
-    width: 0;
-    visibility: hidden;
-    width: 0;
-    height: 100%;
-    transition: all 1s ease-in-out;
-    z-index: -1;
-    
-
-}
-.close{
-    cursor: pointer;
-}
-
-.show-menu{
-    width: 100%;
-    visibility: visible;
-}
-
-.tilt-right {
-    transform:rotate(45deg);
-}
-
-.tilt-left {
-    transform:rotate(-45deg);
-}
-.change-to-x{
-    position: absolute;
-}
+/* ÞETTA ER DG
+#nav-menu > ul > li > button {
+    display: none;
+  }
 */
 
+.hamburger_container{
+    display: none;
+}
 
-
-
-
-
-
-
+.menu_hamburger{
+    display: none;
+}
 
 
 
@@ -1191,8 +1121,7 @@ section.container_all_teachers{
 
     .hamburger{
         display: block;
-        margin-right: 16px;
-        height: 24px;
+        
     }
 
     .logo-column{
@@ -1580,7 +1509,7 @@ section.container_all_teachers{
 }
 
 
-   /* Bæta þessum við inn í media*/
+   /* Bæta þessum við inn í media DG
    #nav-menu {
     display: none;
   }
@@ -1606,7 +1535,7 @@ section.container_all_teachers{
     display: block;
     height: 24px;
     width: 24px;
-    /*background-image: url('../images/hamburger.svg');*/
+    background-image: url('../images/hamburger.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
@@ -1623,9 +1552,83 @@ section.container_all_teachers{
     background-color: transparent;
     border: 0px;
   }
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*XXXXXXXXXXXXXXXXXX  ÞETTA ER MINN BURGER Í MOBILE  XXXXXXXXXXXXXXXX*/
+
+.burger {
+
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition:all 2s;
 }
 
+.burger_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    z-index: 3;
+}
 
+.burgerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    z-index: 3;
+}
+
+.menu_hamburger{
+    right: 0px;
+    background-color: red;
+    position: absolute;
+    top:0px;
+    width: 0;
+    visibility: hidden;
+    width: 0;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    z-index: -1;
+    
+
+}
+.close{
+    cursor: pointer;
+}
+
+.show-menu{
+    width: 100%;
+    visibility: visible;
+}
+
+.tilt-right {
+    transform:rotate(45deg);
+}
+
+.tilt-left {
+    transform:rotate(-45deg);
+}
+.change-to-x{
+    position: absolute;
+}
 
 
 
