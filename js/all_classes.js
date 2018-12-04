@@ -155,17 +155,11 @@ var filterClassesByTypeFunction = function(typeParameter) {
     return filteredClassesResultVariable
 }
 
-/*allClassesButtonElement.onclick = onAllClassesButtonClick
+
+allClassesButtonElement.onclick = onAllClassesButtonClick
 openClassesButtonElement.onclick = onOpenClassesButtonClick
-closeClassesButtonElement.onclick = onCloseClassesButtonClick*/
+closeClassesButtonElement.onclick = onCloseClassesButtonClick
 
-
-// Kalla í fallið ef ég er á námskeiðasíðunni
-if (allClassesButtonElement !== null) {
-    allClassesButtonElement.onclick = onAllClassesButtonClick
-    openClassesButtonElement.onclick = onOpenClassesButtonClick
-    closeClassesButtonElement.onclick = onCloseClassesButtonClick
-}
 
 
 
