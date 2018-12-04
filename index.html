@@ -19,25 +19,52 @@
     <header>  
         <nav class="nav_container">
             <div class="logo-column">
-            <img src="images/jogasetrid-hvitt.svg" class="jogasetur_logo" alt="Jógasetrið_logo">
+                <img src="images/jogasetrid-hvitt.svg" class="jogasetur_logo" alt="Jógasetrið_logo">
             </div> 
-            <div class="nav_inner">
+     <!--þetta eru hamburger DG  sem er aðeins sýnilegur í mobile 
+            <div> 
+                <button class="hamburger" id= "nav-button"></button>
+            </div>
+        -->
+        
+           <!-- þetta er mín útgáfa af hamburger.... --> 
+            <div class="hamburger_container">
+                <div class="burger"></div>
+                <div class="burger"></div>
+                <div class="burger"></div>
+            </div>
+            <div class="menu_hamburger">
+                <h1>Þetta er menu!!!</h1>
+            </div> 
+
+
+        <!--Bætti þessum dropdown í li - jógasetrinu / eða um okkur -->
+            <div class="nav_inner" id="nav-menu">
                     <ul class="nav_list">
-                        <li><a href="jogasetrid.html" class="nav-item">Jógasetrið</a></li>
+                        <li><button id="close-nav-button"></button></li>
+                        <li><div class="dropdown">
+                            <buttona class="dropbtn">Um okkur</button>
+                                <div class="dropdown-content">
+                                  <a href="#">Um Jógasetrið</a>
+                                  <a href="#">Kennarar</a>
+                                  <a href="#">Upplýsingar</a>
+                                </div>
+                              
+                        </li>
                         <li><a href="stundaskra.html" class="nav-item">Stundaskrá</a></li>
                         <li><a href="namskeid.html" class="nav-item">Námskeið</a></li>
                         <li><a href="medgongujoga.html" class="nav-item">Meðgöngujóga</a></li>
                         <li><a href="kennaranam.html" class="nav-item">Kennaranám</a></li>
                         <li><a href="verdskra.html" class="nav-item">Verðskrá</a></li>
-                    </ul>
-                    <ul>  
                         <li><a href="#"><img src="images/leit.svg" /></a></li>
-                    </ul> 
+                    </ul>        
             </div>
-        <!--þetta eru hamburger sem er aðeins sýnilegur í mobile -->
-                <div> 
-                    <img class="hamburger" src="images/hamburger.svg" alt="yfirlit">
-                </div>
+
+            <!---<a href="jogasetrid.html" class="nav-item">Um okkur</a>-->
+
+
+
+                
         </nav>
 
         </header>
@@ -64,9 +91,10 @@
           
         </div>
          <!-- hér er tímataflan á forsíðu -->
-        <div class="time_container">
-            <div class="top_container">
-                <h1> Tímar í dag</h1>
+        <div class="time_container_carousel">
+         <div class="time_container" id="time_container">
+            <!--- <div class="top_container">
+                <h1>Tímar í dag</h1>
                 <div class="selected_date_border"></div>
                 <ul>
                     <li>Mánudag</li>
@@ -76,9 +104,9 @@
                     <li>Föstudag</li>
                     <li>Laugardag</li>
                     <li>Sunnudag</li>
-                </ul>
-                <i class="or_left"></i>
-                <i class="or_right"></i>
+                </ul> 
+                <button onclick="changeDay(1)" class="or_left"></button>
+                <button onclick="changeDay(-1)" class="or_right"></button>
             </div>
         
             <div class="bottom_container">
@@ -124,6 +152,8 @@
         
                 </div>
             </div>
+        ---->
+     </div>
         </div>
         
     

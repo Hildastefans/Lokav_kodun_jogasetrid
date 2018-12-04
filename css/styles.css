@@ -44,13 +44,14 @@ nav.nav_container {
 nav.nav_container .nav_inner{
     padding-top: 10px;
     display: flex;
-    z-index: 99;
-    padding-left: 390px
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 99;  
 }
-
 
 nav.nav_container ul {
   padding: 0;
+  justify-content: flex-end;
   display: flex; 
 }
 
@@ -76,14 +77,14 @@ nav.nav_container .nav_inner a {
 /* hefur áhrifa á logo staðsetningu */
 nav.nav_container{
     width: 95%;
-
 }
   
 /* hér er hero mynd, texti og 3 buttons */
 
   
 .hero_container {
-    background-image: url("../images/hero_image_1.jpg");
+    /*background-image: url("../images/hero_image_1.jpg");*/
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/hero_image_1.jpg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -95,14 +96,14 @@ nav.nav_container{
 
   }
 
-.hero_container:after {
+/*.hero_container:after {
 
     content: "";
     height: 100%;
     width: 100%;
     position: absolute;
     background-color: rgba(0,0,0,0.3);
-    }
+    }*/
 
 .hero_content {
     padding-top: 130px;
@@ -129,6 +130,7 @@ nav.nav_container{
     align-items: center;
 }
 
+
 .hero_buttons button{
     background-color: transparent;
     color: rgb(255, 255, 255); 
@@ -137,6 +139,12 @@ nav.nav_container{
     text-transform: uppercase;
     font-size: 16px;
     margin: 16px;
+}
+
+
+.hero_buttons button:hover{
+    background-color: #F4F0F0;
+    color: #584957;
 }
 
 .container button{
@@ -208,15 +216,15 @@ nav.nav_container{
     width: 448px;
     padding-top: 16px;
 }
+
 .box_3_4_5 p{
     font-size: 16px;
     font-weight: 100;
     line-height: 22px;
     text-align: center;
-    width: 432px;
+    width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
-
 }
 
 .box_1{
@@ -240,6 +248,17 @@ nav.nav_container{
     font-weight: 100;
 }
 
+/* þessi var bætt við í ATH á eftir að stíla */
+.time_container_carousel{
+    position: relative;
+    overflow: hidden;
+    width: 448px;
+    background-color: #584957;
+    color: #E2DEDD;
+    min-width: 448px;
+    padding-top: 24px;
+}
+
 .box_1 button{
     background-color: transparent;
     color: #E2DEDD;
@@ -252,15 +271,21 @@ nav.nav_container{
     z-index: 10;  
 }
 
-.time_container{
-    
-    background-color: #584957;
-    color: #E2DEDD;
-    min-width: 448px;
-    padding-top: 24px;
-    
-
+.box_1 button:hover{
+    background-color: #F4F0F0;
+    color: #584957;
 }
+
+.time_container{
+    display:flex;
+    position: absolute;
+    transition: all 1s;  
+}
+
+.timeTableContainer_2{
+    min-width: 448px; 
+}
+
 .time_container h1{
     font-size: 24px;
     font-weight: 200;
@@ -271,6 +296,7 @@ nav.nav_container{
     font-size: 16px;
     padding-bottom: 40px;
 }
+
 .top_container ul{
     /*display: flex; 
     flex-direction: row; */
@@ -288,23 +314,19 @@ nav.nav_container{
 .line{
     border-bottom: 1px solid white;
     height: 48px;
-
 }
 
 .time_container .selected_date_border{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;  
 }
 
 .line span{
     font-size: 16px;
-    
-
 }
+
 .bottom_container .class_time .line.first{
     border-top: 1px solid white;
-
 }
 
 
@@ -401,33 +423,72 @@ footer{
 .logo_email h3{
     letter-spacing: 2px;
     font-weight: 300;
-    font-size: 16px;
-        
+    font-size: 16px;      
 }
     
-
 .address{
     color: #E2DEDD;
     bottom: 0;
-    font-size: 16px;
-    
+    font-size: 16px;   
 }
+
 .address p{
     line-height: 1.5;
     font-weight: 200;
-    font-size: 16px;
-    
+    font-size: 16px;  
 }
+
 .address h3{
     line-height: 3.5;
     font-size: 16px;
-    font-weight: 200;
-    
+    font-weight: 200;  
 }
+
 .social_media{
     margin-top: 95px;
-
 }
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color:transparent;
+    color: white;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444343;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: purple;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color:transparent;}
 
 
 
@@ -437,6 +498,7 @@ footer{
 .background_image {
 
     background-image: url(../images/staktnamskeid.jpg);
+    /*background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/hero_image_1.jpg");*/
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -469,6 +531,7 @@ footer{
     z-index: 15;
     margin-top:200px;
  }
+
  .gutter{
      padding:24px;
  }
@@ -482,17 +545,11 @@ footer{
      width: 100%;
  }
 
- .description_container{
-     
- }
-
-
  .description_container h1{
     font-size: 48px;
     letter-spacing: 4px;
     font-size: 48px;
     padding-bottom: 24px;
-
  }
 
  .description_container p{
@@ -500,20 +557,15 @@ footer{
     font-weight: 300px;
     line-height: 1.8;
     letter-spacing: 2px;
-    padding-bottom: 52px;
-    
-    
+    padding-bottom: 52px;   
 }
+
 .description_container{
     width: 40%;
-  
-
 }
 
 .description_container_2{
-    width: 684px;
-    
-    
+    width: 684px;   
 }
 
 .description_container_2 .description_content{
@@ -528,8 +580,8 @@ footer{
     letter-spacing: 4px;
     margin: 24px;
     text-transform: uppercase;
-   
 }
+
 .description_container_2 h3{
     font-size: 24px;
     font-weight: 200;
@@ -539,20 +591,18 @@ footer{
     line-height: 1.9;
     padding-bottom: 24px;   
 }
+
 .description_container_2 h3 span{
     font-size: 24px;
     font-weight: 700;
-  
 }
 
 .info_line{ 
     border-bottom: 2px solid #F4F0F0;
     width: 573px;
     margin-left: 24px;
-    
-
-
 }
+
 .description_container_2 h2{
     font-size: 24px;
     font-weight: 300;
@@ -574,25 +624,14 @@ footer{
     margin-bottom: 80px;
 }
 
-
-.price{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #F4F0F0;
-    width: 100%; 
-}
-
 .price_container_left{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 32px auto;
-    /* padding-left: 32px; */
+    padding-top: 72px;
     line-height: 2.3;
-    width: 30%;
-
-
+    width: 100%;
 }
 
 .price_container_left h1{
@@ -600,9 +639,9 @@ footer{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2;
-    margin-left: 32px;
-    
+    margin-left: 32px;  
 }
+
 .price_container_left h4{
     font-size: 16px;
     font-weight: 600;
@@ -620,6 +659,7 @@ footer{
     margin-left: 24px;
     font-weight: 600;
 }
+
 .price_right1 h4{
     text-transform: uppercase;
     margin-left: 24px;
@@ -635,11 +675,11 @@ footer{
 .price_container_right{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 32px auto;
-    line-height: 2;
-    width: 30%;
-    margin-left: 100px;
+    padding-top: 72px;
+    line-height: 2.3;
+    width: 100%;
 }
 
 .price_container_right1{
@@ -647,8 +687,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin: 32px auto;
-    line-height: 2;
-   
+    line-height: 2; 
 }
 
 .price_container_right2{
@@ -656,15 +695,13 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin: 32px auto;
-    line-height: 2;
-    
+    line-height: 2;  
 }
 
 
 span {
     font-size: 16px;
     font-weight: 300;
-
 }
 
 .class_info{
@@ -691,7 +728,6 @@ span {
     color: #F4F0F0;
 }
 
-
 .icon{
     display: flex;
     flex-direction: column;
@@ -708,14 +744,15 @@ span {
     line-height: 2.1;
     height: 180px;
 }
+
 .color_open{
     background-color: #8C288C;
     bottom: 0 auto;
     width: 8px;
     height: 22px;
-    margin-top: 25px;
-    
+    margin-top: 25px;  
 }
+
 .first_time{
     display: flex;
     flex-direction: row;
@@ -723,10 +760,6 @@ span {
     letter-spacing: 1px;
 }
 
-.price_name_note{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .price h1{
     font-size: 32px;
@@ -735,6 +768,7 @@ span {
     padding-top: 20px;
     padding-left: 24px;
 }
+
 .price_name_note{
     display: flex;
     flex-wrap: wrap;
@@ -756,44 +790,42 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
     height: 48px;
     margin: 24px; 
     margin-bottom: 48px;   
-
 }
+
 .opening_closing_boxes .opening{
     border-right: 16px solid #8C288C;
-
 }
 
 .opening_closing_boxes .close{
     border-right: 16px solid #444242;
-
 }
-
-
 
 .opening_closing_boxes button{
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 4px;
     width: 200px;
+    margin-left: 16px;
     color: #584957;
     height: 48px;
     background-color: transparent;
     margin-bottom: 48px;
     text-transform: uppercase;
-
 }
+
 .all:hover {
     background-color: #584957;
     color: #F4F0F0;
 }
+
 .opening:hover {
     background-color: #8C288C;
     color: #F4F0F0;
 }
+
 .close:hover {
     background-color: #444242;
     color: #F4F0F0;
@@ -814,8 +846,6 @@ section.container_all_classes{
     justify-content: flex-start;
     margin: 0 auto;
     flex-wrap: wrap;
-
-
 }
 
 .open_classes{
@@ -825,18 +855,15 @@ section.container_all_classes{
     border-right: 24px solid #8C288C;
     margin-left: 24px;
     margin-bottom: 64px;
-   
-
 }
+
 .close_classes{
     width: 416px;
     height: 360px;
     background-color: #F4F0F0;
     border-right: 24px solid #444242;
     margin-left: 24px;
-    margin-bottom: 64px;
-
-    
+    margin-bottom: 64px;  
 }
 
 .open_classes h1{
@@ -893,7 +920,6 @@ section.container_all_classes{
     margin-top: 32px;
     margin-left: 22px;
     text-transform: uppercase;
- 
 }
 
 
@@ -979,9 +1005,13 @@ section.container_all_teachers{
     width: 328px;
     /* height: 420px; */
     color: #584957;
-    margin-left: 24px;
+    margin-right: 24px;
     margin-bottom: 48px;
     /* margin-top: 80px; */
+}
+
+.teachers_container.last{
+    margin-right: 0;
 }
 
 .teachers_container img{
@@ -1008,15 +1038,44 @@ section.container_all_teachers{
     margin-bottom: 8px;
     text-transform: uppercase;   
 }
+
+
+#nav-menu > ul > li > button {
+    display: none;
+  }
 /*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxxxxxxxxxxxx*/
-.teachers_container img:hover {
-    background-color: #8C288C;
-}
+/*.teachers_container img:hover {
+    background-color: #8C288C;*/
+
 /*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxx*/
-.teachers_container img:hover  {
+/*.teachers_container img:hover  {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.7s;
+}*/
+
+
+
+
+
+/* Þetta er fyrir nav bar */
+
+
+/* ÞETTA ER DG
+#nav-menu > ul > li > button {
+    display: none;
+  }
+*/
+
+.hamburger_container{
+    display: none;
 }
+
+.menu_hamburger{
+    display: none;
+}
+
+
+
 
 
 
@@ -1062,7 +1121,6 @@ section.container_all_teachers{
 
     .hamburger{
         display: block;
-        margin-right: 40px;
         
     }
 
@@ -1133,45 +1191,11 @@ section.container_all_teachers{
         flex-direction: column;
     }
 
-    footer {
-        /* height: 192px; */
-        background-color: #584957;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        height: auto;
+    .time_container_carousel{
+        min-width: 0;
+        height: 500px;
     }
-
-    .container_footer{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        justify-content: space-between;
-    }
-
-    .address{
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom:40px;
-    }
-
-    .address h3 {
-        line-height: 3.5;
-        font-size: 24px;
-        font-weight: 200;
-    }
-
-    .logo_email{
-        color: #F4F0F0;
-        line-height: 3;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .social_media{
-        margin: 0 auto;
-        margin-top: 30px;
-    }
+    
 
     .box_3_4_5 {
         display: flex;
@@ -1287,9 +1311,12 @@ section.container_all_teachers{
     }
 
     .color_open{
-        height: 40px;
+        height: 32px;
         margin-top:-66px;
+        margin-bottom:20px 
+        
     }
+
 
     .description_container_2 h2{
         padding-bottom: none;
@@ -1335,7 +1362,8 @@ section.container_all_teachers{
     .price_container_left{
     
         padding-left: none;
-        width: 100%;      
+        width: 100%;
+        padding-top: 0;      
     }
 
     .price_container_right{
@@ -1343,6 +1371,7 @@ section.container_all_teachers{
         width: 100%;
         margin-left: none;
         margin-left: 0px;
+        padding-top: 0;
     }
 
 
@@ -1375,15 +1404,15 @@ section.container_all_teachers{
     
     .teachers_container{
         flex-direction: column;
-        margin-left: 0px;
-        width: 100%;
-       
-         
+        margin-right: 0px;
+        width: 100% !important;
+        height: auto;
+           
     }
     
     .teachers_container img{
         width: 100%;
-
+        height: 320px;
     }
 
     /*  ÖLL NÁMSKEIÐ BYRJA HÉR  */
@@ -1393,10 +1422,10 @@ section.container_all_teachers{
         flex-direction: column;
         justify-content: space-between;
         margin: 0 auto;
-        height: auto;
-        
+        height: auto;  
+    }
 
-    }.opening_closing_boxes button{
+    .opening_closing_boxes button{
 
         width: auto;
         margin-bottom: 15px;
@@ -1408,6 +1437,7 @@ section.container_all_teachers{
         height: auto;
         margin-left: 0px;
     }
+
     .open_classes button{
         margin: 15px auto;
         margin-left: 20px;
@@ -1434,6 +1464,191 @@ section.container_all_teachers{
         margin: 15px auto;
         margin-left: 20px;
     }
+
+
+
+/* Hér er footer */
+    footer {
+    /* height: 192px; */
+        background-color: #584957;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+}
+
+    .container_footer{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-between;
+}
+
+    .address{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom:40px;
+}
+
+    .address h3 {
+        line-height: 3.5;
+        font-size: 24px;
+        font-weight: 200;
+}
+
+    .logo_email{
+        color: #F4F0F0;
+        line-height: 3;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .social_media{
+        margin: 0 auto;
+        margin-top: 30px;
+}
+
+
+   /* Bæta þessum við inn í media DG
+   #nav-menu {
+    display: none;
+  }
+  #nav-button.expanded {
+    display: none;
+  }
+
+  #nav-menu.expanded {
+    display: block;
+  }
+
+  #nav-menu.expanded ul {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    background-color: #584957;
+  }
+
+  #nav-menu.expanded > ul > li > button {
+    position: absolute;
+    right: 10px;
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-image: url('../images/hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: 0px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 16px;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: 0px;
+  }
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*XXXXXXXXXXXXXXXXXX  ÞETTA ER MINN BURGER Í MOBILE  XXXXXXXXXXXXXXXX*/
+
+.burger {
+
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition:all 2s;
+}
+
+.burger_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    z-index: 3;
+}
+
+.burgerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    z-index: 3;
+}
+
+.menu_hamburger{
+    right: 0px;
+    background-color: red;
+    position: absolute;
+    top:0px;
+    width: 0;
+    visibility: hidden;
+    width: 0;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    z-index: -1;
+    
+
+}
+.close{
+    cursor: pointer;
+}
+
+.show-menu{
+    width: 100%;
+    visibility: visible;
+}
+
+.tilt-right {
+    transform:rotate(45deg);
+}
+
+.tilt-left {
+    transform:rotate(-45deg);
+}
+.change-to-x{
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    
