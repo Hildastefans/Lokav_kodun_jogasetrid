@@ -279,78 +279,10 @@ var displayTeacherFunction = function(teacherParameter) {
     `
     containerAllTeachersElement.innerHTML += teacherHtmlVariable
 }
- // debugger
+
 displayAllTeachersFunction(teachersArrayVariable)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//XXXXXXXXXXXXXXXXXXXXXX  HÉR ER LEIT  XXXXXXXXXXXXXXXXXXXXX
-
-
-//ÞAÐ VÆRI GOTT AÐ LEITA - HAFA ONCLIK Á +  OG LOKA MEÐ -
-
-//leit í html .. <ul><li><a href="#"><img src="images/leit.svg" /></a></li></ul> 
-//undir (class) nav_list
-
-
-
-var onClickOpenSearch = function() {
-    if (addCardDiv.style.display === "") {
-        addCardDiv.style.display = "none"
-        showAddCardDiv.innerHTML = "+"
-    } else {
-        addCardDiv.style.display = ""
-        showAddCardDiv.innerHTML = "-"
-    }
-}
-
-
-
-var onSearchInputInput = function() {
-    var searchText = searchInput.value.toLowerCase()
-    var AllClassesResult = []
-    // Fara í gegnum kortin og setja í leitarniðurstöðu array þau sem passa
-    for(i=0; i<classes.length; i++) {
-        var AllClasses = AllClasses[i]
-        var ClassesTitle = AllClasses.title.toLowerCase()
-        var button = AllClasses.button.toLowerCase()
-        
-
-        if (cardTitle.startsWith(searchText) 
-            || buttonText1.includes(searchText)
-            || buttonText2.includes(searchText)) {
-            // Kort sem uppfyllir leit bætt við leitarniðurstöður
-            cardsResult.push(card)
-        }
-    }
-
-    // Birta leitarniðurstöður
-    displayCards(cardsResult)
-    
-}
 
 
 
@@ -620,11 +552,58 @@ var dayOfWeek = today.getDay()
 changeDay(-dayOfWeek)
 
 
+// þetta er fyrir menu 
+
+const navMenuButtonElement = document.getElementById('nav-button')
+const closeNavMenuButtonElement = document.getElementById('close-nav-button')
+const navMenuElement = document.getElementById('nav-menu')
+navMenuButtonElement.addEventListener('click', onNavMenuButtonClick)
+closeNavMenuButtonElement.addEventListener('click', onCloseNavMenuButtonClick)
+
+const activeClass = 'expanded'
+function onNavMenuButtonClick(e) {
+  navMenuButtonElement.classList.add(activeClass)
+  navMenuElement.classList.add(activeClass)
+}
+
+function onCloseNavMenuButtonClick(e) {
+  navMenuButtonElement.classList.remove(activeClass)
+  navMenuElement.classList.remove(activeClass)
+}
 
 
 
+// MENU Í MOBLILE - EÐA VIRKNI Á HAMBURGER
+
+/*
+var burger = document.querySelector(".burgerContainer");
+var close = document.querySelector (".close");
+var menu = document.querySelector (".menu");
+var burgerLines = document.getElementsByClassName("burger");
+var navIsOpen = false;
 
 
+burger.onclick = function (){
+    if(!navIsOpen){
+    menu.classList.add("show-menu");
+    burgerLines[0].classList.add("tilt-right");
+    burgerLines[2].classList.add("tilt-left");
+    for (var i = 0; i < burgerLines.length; i++){
+        burgerLines[i].classList.add("change-to-x")
+    }
+    navIsOpen = true;
+}
+
+else{
+    menu.classList.remove("show-menu");
+    burgerLines[0].classList.remove("tilt-right");
+    burgerLines[2].classList.remove("tilt-left");
+    for (var i = 0; i < burgerLines.length; i++) {
+        burgerLines[i].classList.remove("change-to-x")
+    }
+    navIsOpen = false;
+    }
+}*/
 
 
 

@@ -43,14 +43,16 @@ nav.nav_container {
 
 nav.nav_container .nav_inner{
     padding-top: 10px;
-    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     z-index: 99;
-    padding-left: 390px
+    
 }
 
 
 nav.nav_container ul {
   padding: 0;
+  justify-content: flex-end;
   display: flex; 
 }
 
@@ -130,6 +132,7 @@ nav.nav_container{
     align-items: center;
 }
 
+
 .hero_buttons button{
     background-color: transparent;
     color: rgb(255, 255, 255); 
@@ -138,6 +141,12 @@ nav.nav_container{
     text-transform: uppercase;
     font-size: 16px;
     margin: 16px;
+}
+
+
+.hero_buttons button:hover{
+    background-color: #F4F0F0;
+    color: #584957;
 }
 
 .container button{
@@ -241,8 +250,7 @@ nav.nav_container{
     font-weight: 100;
 }
 /* þessi var bætt við í ATH á eftir að stíla */
-.time_container_3{
-    min-width: 448px;
+.time_container_carousel{
     position: relative;
     overflow: hidden;
     width: 448px;
@@ -264,6 +272,11 @@ nav.nav_container{
     height: 72px;
     width: 600px;
     z-index: 10;  
+}
+
+.box_1 button:hover{
+    background-color: #F4F0F0;
+    color: #584957;
 }
 
 .time_container{
@@ -448,6 +461,48 @@ footer{
 
 
 
+/* Dropdown Button */
+.dropbtn {
+    background-color:transparent;
+    color: white;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444343;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: purple;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color:transparent;}
+
+
+
 
 /********************************************** STAKT NÁMSKEIÐ *********************************************************/
 
@@ -562,10 +617,9 @@ footer{
     border-bottom: 2px solid #F4F0F0;
     width: 573px;
     margin-left: 24px;
-    
-
 
 }
+
 .description_container_2 h2{
     font-size: 24px;
     font-weight: 300;
@@ -588,22 +642,14 @@ footer{
 }
 
 
-.price{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #F4F0F0;
-    width: 100%; 
-}
-
 .price_container_left{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 32px auto;
-    /* padding-left: 32px; */
+    padding-top: 72px;
     line-height: 2.3;
-    width: 30%;
+    width: 100%;
 
 
 }
@@ -648,11 +694,11 @@ footer{
 .price_container_right{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 32px auto;
-    line-height: 2;
-    width: 30%;
-    margin-left: 100px;
+    padding-top: 72px;
+    line-height: 2.3;
+    width: 100%;
 }
 
 .price_container_right1{
@@ -736,10 +782,6 @@ span {
     letter-spacing: 1px;
 }
 
-.price_name_note{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .price h1{
     font-size: 32px;
@@ -769,7 +811,6 @@ span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
     height: 48px;
     margin: 24px; 
     margin-bottom: 48px;   
@@ -785,13 +826,12 @@ span {
 
 }
 
-
-
 .opening_closing_boxes button{
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 4px;
     width: 200px;
+    margin-left: 16px;
     color: #584957;
     height: 48px;
     background-color: transparent;
@@ -1025,6 +1065,11 @@ section.container_all_teachers{
     margin-bottom: 8px;
     text-transform: uppercase;   
 }
+
+
+#nav-menu > ul > li > button {
+    display: none;
+  }
 /*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxxxxxxxxxxxx*/
 /*.teachers_container img:hover {
     background-color: #8C288C;*/
@@ -1034,6 +1079,73 @@ section.container_all_teachers{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.7s;
 }*/
+/* Þetta er fyrir nav bar */
+
+/*XXXXXXXXXXXXXXXXXX  ÞETTA ER MINN BURGER Í MOBILE  XXXXXXXXXXXXXXXX*/
+
+/*.burger {
+
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition:all 2s;
+}
+
+.burgerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    z-index: 3;
+}
+
+.menu{
+    right: 0px;
+    background-color: red;
+    position: absolute;
+    top:0px;
+    width: 0;
+    visibility: hidden;
+    width: 0;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    z-index: -1;
+    
+
+}
+.close{
+    cursor: pointer;
+}
+
+.show-menu{
+    width: 100%;
+    visibility: visible;
+}
+
+.tilt-right {
+    transform:rotate(45deg);
+}
+
+.tilt-left {
+    transform:rotate(-45deg);
+}
+.change-to-x{
+    position: absolute;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1150,45 +1262,11 @@ section.container_all_teachers{
         flex-direction: column;
     }
 
-    footer {
-        /* height: 192px; */
-        background-color: #584957;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        height: auto;
+    .time_container_carousel{
+        min-width: 0;
+        height: 500px;
     }
-
-    .container_footer{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        justify-content: space-between;
-    }
-
-    .address{
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom:40px;
-    }
-
-    .address h3 {
-        line-height: 3.5;
-        font-size: 24px;
-        font-weight: 200;
-    }
-
-    .logo_email{
-        color: #F4F0F0;
-        line-height: 3;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .social_media{
-        margin: 0 auto;
-        margin-top: 30px;
-    }
+    
 
     .box_3_4_5 {
         display: flex;
@@ -1304,9 +1382,12 @@ section.container_all_teachers{
     }
 
     .color_open{
-        height: 40px;
+        height: 32px;
         margin-top:-66px;
+        margin-bottom:20px 
+        
     }
+
 
     .description_container_2 h2{
         padding-bottom: none;
@@ -1352,7 +1433,8 @@ section.container_all_teachers{
     .price_container_left{
     
         padding-left: none;
-        width: 100%;      
+        width: 100%;
+        padding-top: 0;      
     }
 
     .price_container_right{
@@ -1360,6 +1442,7 @@ section.container_all_teachers{
         width: 100%;
         margin-left: none;
         margin-left: 0px;
+        padding-top: 0;
     }
 
 
@@ -1452,6 +1535,117 @@ section.container_all_teachers{
         margin: 15px auto;
         margin-left: 20px;
     }
+
+
+
+/* Hér er footer */
+    footer {
+    /* height: 192px; */
+        background-color: #584957;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+}
+
+    .container_footer{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-between;
+}
+
+    .address{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom:40px;
+}
+
+    .address h3 {
+        line-height: 3.5;
+        font-size: 24px;
+        font-weight: 200;
+}
+
+    .logo_email{
+        color: #F4F0F0;
+        line-height: 3;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .social_media{
+        margin: 0 auto;
+        margin-top: 30px;
+}
+
+
+   /* Bæta þessum við inn í media*/
+   #nav-menu {
+    display: none;
+  }
+  #nav-button.expanded {
+    display: none;
+  }
+
+  #nav-menu.expanded {
+    display: block;
+  }
+
+  #nav-menu.expanded ul {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    background-color: #584957;
+  }
+
+  #nav-menu.expanded > ul > li > button {
+    position: absolute;
+    right: 10px;
+    display: block;
+    height: 24px;
+    width: 24px;
+    /*background-image: url('../images/hamburger.svg');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: 0px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 16px;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    
