@@ -1,48 +1,22 @@
 <!DOCTYPE html>
-<html lang="is"></html>
+<html lang="is">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' href='css/reset.css' /> 
-    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>
-        Lokaverkefni Jógasetrið
-    </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' href='css/reset.css' /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-</head>
-<body>
+        <title>Lokaverkefni Jógasetrið</title>
+    </head>
+    <body>
         <!-- þetta er nav-bar efst á síðu-->
-    <header>  
-        <nav class="nav_container">
-            <div class="logo-column">
-                <a href="index.html" alt="forsíða"><img src="images/jogasetrid-hvitt.svg" class="jogasetur_logo" alt="Jógasetrið_logo"></a>
-            </div> 
-
-     <!--þetta eru hamburger sem er aðeins sýnilegur í mobile -->
-            <div> 
-                <button class="hamburger" id= "nav-button"></button>
-            </div>
-     
-            <div class="nav_inner" id="nav-menu">
-                    <ul class="nav_list">
-                        <li><button id="close-nav-button"></button></li>
-                        <li><a href="jogasetrid.html" class="nav-item">Um okkur</a</li>
-                        <li><a href="stundaskra.html" class="nav-item">Stundaskrá</a></li>
-                        <li><a href="namskeid.html" class="nav-item">Námskeið</a></li>
-                        <li><a href="medgongujoga.html" class="nav-item">Meðgöngujóga</a></li>
-                        <li><a href="kennaranam.html" class="nav-item">Kennaranám</a></li>
-                        <li><a href="verdskra.html" class="nav-item">Verðskrá</a></li>
-                        <li><a href="#"><img src="images/leit.svg" /></a></li>
-                    </ul>        
-            </div>
-        
-        </nav>
-
+        <header>  
+           
         </header>
+        <main></main>
         <!--hero mynd sem er í vh. 100% -->
         <div class="hero_container">
             <div class="hero_content">
@@ -54,159 +28,69 @@
                 </div>
             </div>
         </div>
+
         <div class="gutter">
-         <!--all fyrir neðan hero mynd / forsidu -->
-        <div class= "text_after_hero">
-            <h2> Lítið og persónulegt Jógasetur þar sem þú finnur fjölbreytta jógatíma við þitt hæfi, við tökum vel á móti þér</h2>
-        </div>
-
-        <div class= "container_box_forsida">
-           <div class= box_1>
-                <button type="button">Fjölbreyttir tímar í boði</button>
+            <!--all fyrir neðan hero mynd / forsidu -->
+            <div class= "text_after_hero">
+                <h2> Lítið og persónulegt Jógasetur þar sem þú finnur fjölbreytta jógatíma við þitt hæfi, við tökum vel á móti þér</h2>
             </div>
 
-         <!-- hér er tímataflan á forsíðu -->
-        <div class="time_container_carousel">
-         <div class="time_container" id="time_container">
-            <!--- <div class="top_container">
-                <h1>Tímar í dag</h1>
-                <div class="selected_date_border"></div>
-                <ul>
-                    <li>Mánudag</li>
-                    <li>Þriðjudag</li>
-                    <li>Miðvikudag</li>
-                    <li>Fimmtudag</li>
-                    <li>Föstudag</li>
-                    <li>Laugardag</li>
-                    <li>Sunnudag</li>
-                </ul> 
-                <button onclick="changeDay(1)" class="or_left"></button>
-                <button onclick="changeDay(-1)" class="or_right"></button>
-            </div>
-        
-            <div class="bottom_container">
-                <div class="class_time">
-                    <div class="line first">
-                        <span>10:00 - 11:15</span>
-                        <span>Mjúkt jóga</span>
-                    </div>
-                    <div class="line">
-                        <span>12:00 - 13:00</span>
-                        <span>Kundalini jóga</span>
-                    </div>
-                    <div class="line">
-                        <span>13:30 - 14:30</span>
-                        <span>Jóga fyrir 60+</span>
-                    </div>
+            <div class= "container_box_forsida">
+                <div class= box_1>
+                    <button type="button">Fjölbreyttir tímar í boði</button>
+                </div>
 
-                    <div class="line">
-                        <span>16:00 - 17:00</span>
-                        <span>Jóga fyrir 12-14 ára</span>
-                    </div>
-
-
-                    <div class="line">
-                        <span>17:00 - 18:30</span>
-                        <span>Kundalini jóga</span>
-                    </div>
-
-
-                    <div class="line">
-                        <span>18:45 - 20:00</span>
-                        <span>Meðgöngujóga</span>
-                    </div>
-
-
-                    <div class="line">
-                        <span>20:15 - 21:15</span>
-                        <span>Karlajóga</span>
-                    </div>
-
-
-
-        
+                <!-- hér er tímataflan á forsíðu -->
+                <div class="time_container_carousel">
+                    <div class="time_container" id="time_container"></div>
                 </div>
             </div>
-        ---->
-     </div>
-        </div>
         
-    
-            </div>
+            <!-- hér eru 3 litlir kassar á forsíðu -->
 
-            </div>
-
-        </section>
-        <!-- hér eru 3 litlir kassar á forsíðu -->
-       
-        <div class= box_3_4_5>
-            <a href="meðgonujoga">
-            <div class=box>
-                <img src="images/medgongu_forsida.png" alt="medgongujoga">
-            </a>
-                    <div>
+            <div class= box_3_4_5>
+                <a href="#" alt="meðgöngujóga">
+                    <div class=box>
+                        <img src="images/medgongu_forsida.png" alt="">
                         <h3>Meðgöngujóga</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel mi consectetur</p>
-                        <a href="medgongujoga"></a>
                     </div>
-            
-            </div>
-                <a href="kennaranam">
-                <div class=box>
-                    <img src="images/kennaran_forsida.png" alt="kennaranám">
-                </a> 
-                        <div>
-                            <h3>Kennaranám</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel mi consectetur</p>
-                            <a href="kennaranam"></a>
-                        </div>
-                </div>
-                    
-
-                <a href="vidburdir">
-                <div class=box>
-                    <img src="images/vidburdir.png" alt="viðburðir">
                 </a>
-                        <div>
-                            <h3>Viðburðir</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel mi consectetur</p>
-                        </div>
-                </div>
+                <a href="#" alt="kennaranám">
+                    <div class=box>
+                        <img src="images/kennaran_forsida.png" alt="">
+                        <h3>Kennaranám</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel mi consectetur</p>
+                    </div>
+                </a> 
+                <a href="#" alt="viðburðir">
+                    <div class=box>
+                        <img src="images/vidburdir.png" alt="viðburðir">
+                        <h3>Viðburðir</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel mi consectetur</p>
+                    </div>
+                </a>
             </div>
- 
+
         </div>
+
         <!-- Hér eru fréttabréf á forsíðu -->   
-            <div class="frettabref_wrapper">
-                    <h2>Fréttabréf</h2>
-                    <p>Skráðu þig á póstlistann okkar og fáðu fróðleiksmola og aðrar upplýsingar vikulega</p>
-                        <form class="sign-up">
-                            <input type="text" name="email" placeholder="Skrifaðu inn netfangið þitt hér?">
-                            <button type="submit" onclick="alert(`Takk fyrir þú færð fréttir frá okkur fljótlega`)">Skrá mig</button>
-                        </form>
-            </div>
-              
+        <div class="frettabref_wrapper">
+            <h2>Fréttabréf</h2>
+            <p>Skráðu þig á póstlistann okkar og fáðu fróðleiksmola og aðrar upplýsingar vikulega</p>
+            <form class="sign-up">
+                <input type="text" name="email" placeholder="Skrifaðu inn netfangið þitt hér?">
+                <button type="submit" onclick="alert(`Takk fyrir þú færð fréttir frá okkur fljótlega`)">Skrá mig</button>
+            </form>
+        </div>
 
         <!-- hér er footer -->
-
-        <footer> 
-            <div class="container_footer">      
-                <div class= "address" >
-                    <h3>Jógasetrið</h3>
-                    <p>Skipholti 50c <br> 105 Reykjavík <br> Sími: 778 - 1000</p>
-                </div>
-
-                <div class= "logo_email" >
-                    <img src="images/jogasetrid-hvitt.svg" class="jogasetur_logo" alt="Jógasetrið logo">
-                    <h3>jogasetrid@jogasetrid.is</h3>
-                </div>
-
-                <div class= "social_media" >
-                    <img src= "images/fb.svg" class="fb" alt="facebook_logo">
-                </div>
-            </div>
+        <footer>
         </footer>
-      
-</body>
+
+    </body>
+    <script src="inc/header.js"></script>
+    <script src="inc/footer.js"></script>
     <script src="js/all_classes.js"></script> 
     <script src="js/teachers.js"></script> 
     <script src="js/nav_menu.js"></script>
