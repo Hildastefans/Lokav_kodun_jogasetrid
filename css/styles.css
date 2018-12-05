@@ -326,6 +326,7 @@ nav.nav_container{
     font-size: 24px;
     font-weight: 200;
     padding-bottom: 24px;
+    padding-right: 35px;
 }
 
 .top_container ul{
@@ -1032,6 +1033,7 @@ span .dark_color_line{
     text-transform: uppercase;
     width: 100%;
     margin-top: 32px;
+    cursor: pointer;
 }
 .container_new_members h1{
     font-size: 24px;
@@ -1093,6 +1095,10 @@ section.container_all_teachers{
     margin: 0 auto;
     flex-wrap: wrap;
     margin-top: 80px;
+}
+
+.container_all_teachers .teachers_container:nth-child(4n){
+    margin-right:0px;
 }
 
 
@@ -1210,6 +1216,10 @@ section.container_all_teachers{
         
     }
 
+    .nav_list{
+
+    }
+
     .logo-column{
         padding-left: 16px;
     }
@@ -1248,8 +1258,12 @@ section.container_all_teachers{
     .timeTableContainer_2 {
         min-width: 415px;
     }
-    
 
+    .bottom_container{
+        margin-right: 4px;
+    }
+
+    
     .box_1 button {
         background-color: transparent;
         color: #E2DEDD;
@@ -1281,9 +1295,20 @@ section.container_all_teachers{
 
     .time_container_carousel{
         min-width: 0;
-        height: 500px;
+        height: 524px;
         margin-top: 24px;
     }
+
+    .line.first {
+        margin-right: 36px;
+    }
+
+    .line.first div{
+        width:140px;
+    }
+
+
+
     
 
     .box_3_4_5 {
