@@ -148,6 +148,7 @@ nav.nav_container{
 .hero_buttons button:hover{
     background-color: #F4F0F0;
     color: #584957;
+    cursor: pointer;
 }
 
 .container button{
@@ -210,6 +211,7 @@ nav.nav_container{
 .box_3_4_5 img{
     /*width: 448px;*/
     height: 475px;
+    cursor: pointer;
 }
 
 .box_3_4_5 h3{
@@ -218,6 +220,7 @@ nav.nav_container{
     text-align: center;
     width: 448px;
     padding-top: 16px;
+    cursor: pointer;
 }
 
 .box_3_4_5 p{
@@ -296,6 +299,7 @@ nav.nav_container{
 .box_1 button:hover{
     background-color: #F4F0F0;
     color: #584957;
+    cursor: pointer;
 }
 
 .time_container{
@@ -470,6 +474,7 @@ nav.nav_container{
     width: 20%;
     color: white;
     background-color: #584957;
+    cursor: pointer;
 
 }
 
@@ -1290,7 +1295,7 @@ section.container_all_teachers{
     .hero_buttons{
         display: flex;
         flex-direction: column; 
-        margin:8px;
+        margin:8px;  
     }
 
     .time_container_carousel{
@@ -1307,10 +1312,6 @@ section.container_all_teachers{
         width:140px;
     }
 
-
-
-    
-
     .box_3_4_5 {
         display: flex;
         flex-direction: column;
@@ -1318,12 +1319,12 @@ section.container_all_teachers{
         justify-content: space-between;
         width: 88%;
         max-width: none;
-        margin: 0 auto;
+        margin: 0 auto; 
     }
 
     .box_3_4_5 img{
         height: 300px;
-        width: 100%;
+        width: 100%;  
     }
 
     .box_3_4_5 p{
