@@ -279,7 +279,8 @@ nav.nav_container{
 .time_container{
     display:flex;
     position: absolute;
-    transition: all 1s;  
+    transition: all 1s; 
+    justify-content: center
 }
 
 .timeTableContainer_2{
@@ -292,9 +293,17 @@ nav.nav_container{
     text-transform: uppercase; 
 }
 
+.top_container h1{
+    font-size: 24px; 
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom:24px;
+}
+
 .top_container{
-    font-size: 16px;
-    padding-bottom: 40px;
+    font-size: 24px;
+    font-weight: 200;
+    padding-bottom: 24px;
 }
 
 .top_container ul{
@@ -1145,11 +1154,10 @@ section.container_all_teachers{
     }
 
     .time_container {
-        background-color: #584957;
-        color: #E2DEDD;
         padding-top: 24px;
         width: 100%;
         min-width: auto;
+        justify-content: center;
     }
     
 
@@ -1158,7 +1166,6 @@ section.container_all_teachers{
         color: #E2DEDD;
         font-size: 16;
         font-weight: 200;
-        text-shadow: 2px 2px 4px #000000;
         line-height: 32px;
         letter-spacing: 10;
         text-transform: uppercase;
