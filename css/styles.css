@@ -84,7 +84,7 @@ nav.nav_container{
   
 .hero_container {
     /*background-image: url("../images/hero_image_1.jpg");*/
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/hero_image_1.jpg");
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/forsidumynd_x1.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -228,7 +228,7 @@ nav.nav_container{
 }
 
 .box_1{
-    background-image: url(../images/namskeid_ibodi_.png);
+    background-image: url(../images/mynd_box1.png);
     height: 544px;
     width: 919px;
     background-repeat: no-repeat;
@@ -505,9 +505,8 @@ footer{
 /********************************************** STAKT NÁMSKEIÐ *********************************************************/
 
 .background_image {
-
-    background-image: url(../images/staktnamskeid.jpg);
-    /*background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/hero_image_1.jpg");*/
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/staktnam_img.png");
+    /*background-image: url(../images/staktnamskeid.jpg);*/
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -519,14 +518,14 @@ footer{
 
 }
 
-.background_image:after {
+/*.background_image:after {
 
     content: "";
     height: 60vh;
     width: 100%;
     position: absolute;
     background-color: rgba(0,0,0,0.3);
-}
+}*/
 
 .background_image h1 {
     color: #F4F0F0;
@@ -792,7 +791,36 @@ span {
 
 
 /********************************************** Öll námskeið *********************************************************/
+.background_image {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/oll_namskeid_sida.png");
+    /*background-image: url(../images/staktnamskeid.jpg);*/
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+
+.background_image h1 {
+    color: #F4F0F0;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 100;
+    font-size: 88px;
+    letter-spacing: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+    z-index: 15;
+    margin-top:200px;
+ }
+
+ .gutter{
+     padding:24px;
+ }
 
 
 .opening_closing_boxes{
@@ -994,6 +1022,38 @@ span .dark_color_line{
 
 /********************************************** Kennarar *********************************************************/
 
+.background_image {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/oll_starfs_mynd.png");
+    /*background-image: url(../images/staktnamskeid.jpg);*/
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.background_image h1 {
+    color: #F4F0F0;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 100;
+    font-size: 88px;
+    letter-spacing: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+    z-index: 15;
+    margin-top:200px;
+ }
+
+ .gutter{
+     padding:24px;
+ }
+
+
 
 
 section.container_all_teachers{
@@ -1186,12 +1246,14 @@ section.container_all_teachers{
 
     .hero_buttons{
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
+        margin:8px;
     }
 
     .time_container_carousel{
         min-width: 0;
         height: 500px;
+        margin-top: 24px;
     }
     
 
@@ -1260,7 +1322,7 @@ section.container_all_teachers{
 
     .background_image h1 {
         font-size: 58px;
-        text-shadow:0.5px 0.5px 0.5px #000000;
+        /*text-shadow:0.5px 0.5px 0.5px #000000;*/
     }
 
     .information{
