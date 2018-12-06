@@ -23,11 +23,12 @@ header{
     padding-left: 10px
 }
 .nav_inner a{
-    color:white;
+    color:white
 }
 
 .jogasetur_logo{
     height: 88px;
+    z-index: 66;
 }
 
 nav.nav_container {
@@ -72,8 +73,13 @@ nav.nav_container .nav_inner a {
   padding-left:.7em;
   padding-right:.7em;
   color: white;
+  font-family: roboto, san serif;
+  letter-spacing: 1px;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 200;
+  font-size: 16px;
+  text-shadow: 0.5px 0.5px 0.5px #222020;
+  
 }
 
 
@@ -99,15 +105,6 @@ nav.nav_container{
 
   }
 
-/*.hero_container:after {
-
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0,0,0,0.3);
-    }*/
-
 .hero_content {
     padding-top: 150px;
     display: flex;
@@ -117,13 +114,14 @@ nav.nav_container{
 }
   
 .hero_content h1 {
-    color: #fff;
+    color: white;
     font-weight: 100;
     font-size: 88px;
     letter-spacing: 8px;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 32px;
+    text-shadow: 0px 0.5px 0.5px #222020;
     /*z-index: 15;*/
  }
   
@@ -136,7 +134,7 @@ nav.nav_container{
 
 .hero_buttons button{
     background-color: transparent;
-    color: rgb(255, 255, 255); 
+    color:white; 
     width: 248px;
     height: 56px;
     text-transform: uppercase;
@@ -145,11 +143,12 @@ nav.nav_container{
     letter-spacing: 2.2px;
     font-size: 16px;
     margin: 16px;
+    z-index: 88;
 }
 
 
 .hero_buttons button:hover{
-    background-color: #F4F0F0;
+    background-color: white;
     color: #584957;
     cursor: pointer;
 }
@@ -167,6 +166,7 @@ nav.nav_container{
 
 .text_after_hero h2{
     width: 100%;
+    color: #584957;
     /* height: 180px; */
     font-size: 24px;
     font-weight: 200;
@@ -206,7 +206,7 @@ nav.nav_container{
 }
 
 .box_3_4_5 .box{
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
     width: 100%;
     max-width: 448px;   
 }
@@ -223,7 +223,8 @@ a {
 
 .box_3_4_5 h3{
     font-size: 24px;
-    font-weight: 100;
+    color: #584957;
+    font-weight: 200;
     text-align: center;
     width: 448px;
     padding-top: 16px;
@@ -232,6 +233,7 @@ a {
 
 .box_3_4_5 p{
     font-size: 16px;
+    color: #584957;
     font-weight: 100;
     line-height: 22px;
     text-align: center;
@@ -267,7 +269,7 @@ a {
     overflow: hidden;
     width: 448px;
     background-color: #584957;
-    color: #E2DEDD;
+    color: #F4F0F0;
     min-width: 448px;
     padding-top: 24px;
 }
@@ -293,7 +295,7 @@ a {
 
 .box_1 button{
     background-color: transparent;
-    color: #E2DEDD;
+    color: #F4F0F0;
     font-size: 24px;
     font-weight: 100;
     letter-spacing: 10px;
@@ -359,7 +361,6 @@ a {
     height: 48px;
 }
 
-
 .line.first{
     cursor: pointer;
     position: relative;
@@ -399,7 +400,7 @@ a {
 
 
 .line.first:hover {
-    background-color: #fff;
+    background-color: #F4F0F0;
     color:#584957;  
 }
 
@@ -414,7 +415,7 @@ a {
 }
 
 .bottom_container .class_time .line.first{
-    border-top: 1px solid white;
+    border-top: 1px solid #F4F0F0;
     cursor: pointer;
 }
 
@@ -425,7 +426,7 @@ a {
 .frettabref_wrapper{
     height: 200px;
     width: 100%;
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
     margin-top: 88px;
     margin-bottom: 88px;
     display: flex;
@@ -443,7 +444,8 @@ a {
 }
 
 .frettabref_wrapper p{
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
+    color: #584957;
     font-size: 16px;
     font-weight: 100;
     padding-top: 10px;
@@ -479,9 +481,11 @@ a {
     font-size: 16px;
     height: 48px;
     width: 20%;
-    color: white;
+    font-weight: 300;
+    color: #F4F0F0;
     background-color: #584957;
     cursor: pointer;
+    letter-spacing: 1px;
 
 }
 
@@ -517,7 +521,7 @@ footer{
 }
     
 .address{
-    color: #E2DEDD;
+    color: #F4F0F0;
     bottom: 0;
     font-size: 16px;   
 }
@@ -537,6 +541,7 @@ footer{
 .social_media{
     margin-top: 95px;
 }
+
 
 
 
@@ -577,6 +582,7 @@ footer{
     padding-bottom: 32px;
     z-index: 15;
     margin-top:200px;
+    text-shadow: 0px 0.5px 0.5px #222020;
  }
 
  .gutter{
@@ -678,7 +684,7 @@ footer{
     margin: 32px auto;
     padding-top: 72px;
     line-height: 2.3;
-    width: 100%;
+    width: 80%;
 }
 
 .price_container_left h1{
@@ -812,7 +818,7 @@ span {
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: 32px;
     padding-left: 24px;
 }
 
@@ -1063,7 +1069,6 @@ span .dark_color_line{
 
 .background_image {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/starfs_mynd.png");
-    /*background-image: url(../images/staktnamskeid.jpg);*/
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -1119,12 +1124,13 @@ section.container_all_teachers{
 }
 
 #overlay .text{
-    color: white;
-    font-size: 24px;
+    color: #F4F0F0;
+    font-size: 32px;
     margin: 150px auto;
     text-align: center;
-    font-weight: 300;
-    font-family: Roboto, sans-serif;   
+    font-weight: 200;
+    font-family: Roboto, sans-serif; 
+    text-shadow: 0px 0.5px 0.5px #222020;  
 }
 
 
@@ -1199,7 +1205,7 @@ section.container_all_teachers{
     #nav-menu{
         padding: 1em;
         list-style: none;
-        color: white;
+        color: #F4F0F0;
         font-family: roboto, san serif;
         font-size: 16px;
         font-weight: 200;
@@ -1293,7 +1299,7 @@ section.container_all_teachers{
     
     .box_1 button {
         background-color: transparent;
-        color: #E2DEDD;
+        color: #F4F0F0;
         font-size: 16;
         font-weight: 200;
         line-height: 32px;
@@ -1553,6 +1559,11 @@ section.container_all_teachers{
         height: 320px;
     }
 
+    #overlay {
+        width:443px;
+    }
+
+
     /*  ÖLL NÁMSKEIÐ BYRJA HÉR  */
 
     .opening_closing_boxes{
@@ -1647,6 +1658,10 @@ section.container_all_teachers{
         margin-top: 30px;
 }
 
+    .container_footer a{
+        margin:0 auto
+}
+
 /* þetta er menu bar fyrir mobile  */
   
    #nav-menu {
@@ -1695,40 +1710,6 @@ section.container_all_teachers{
     border: 1px;
     z-index: 500;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
