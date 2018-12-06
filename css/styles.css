@@ -1,5 +1,8 @@
 
 /********************************************** Forsíða *********************************************************/
+html {
+    scroll-behavior: smooth;
+  }
 
 *{
 	font-family: Roboto, sans-serif !important;
@@ -20,11 +23,12 @@ header{
     padding-left: 10px
 }
 .nav_inner a{
-    color:white;
+    color:white
 }
 
 .jogasetur_logo{
     height: 88px;
+    z-index: 66;
 }
 
 nav.nav_container {
@@ -36,21 +40,21 @@ nav.nav_container {
     align-items: center; 
     justify-content: space-between;
     margin: 0 auto;
-    /* text-transform: uppercase; */
     border: none;
-    z-index: 9999
+    z-index: 99;
 }
 
 nav.nav_container .nav_inner{
     padding-top: 10px;
     display: flex;
-    z-index: 99;
-    padding-left: 390px
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 99;  
 }
-
 
 nav.nav_container ul {
   padding: 0;
+  justify-content: flex-end;
   display: flex; 
 }
 
@@ -68,22 +72,23 @@ nav.nav_container .nav_inner a {
   padding-left:.7em;
   padding-right:.7em;
   color: white;
+  font-family: roboto, san serif;
+  letter-spacing: 1px;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 200;
+  font-size: 16px;
+  text-shadow: 0.5px 0.5px 0.5px #222020;
+  
 }
 
-
-/* hefur áhrifa á logo staðsetningu */
 nav.nav_container{
     width: 95%;
-
 }
   
 /* hér er hero mynd, texti og 3 buttons */
-
-  
+ 
 .hero_container {
-    background-image: url("../images/hero_image_1.jpg");
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url("../images/forsidumynd_x1.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -95,32 +100,22 @@ nav.nav_container{
 
   }
 
-.hero_container:after {
-
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0,0,0,0.3);
-    }
-
 .hero_content {
-    padding-top: 130px;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 17;
 }
   
 .hero_content h1 {
-    color: #fff;
+    color: white;
     font-weight: 100;
     font-size: 88px;
     letter-spacing: 8px;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 32px;
-    z-index: 15;
+    text-shadow: 0px 0.5px 0.5px #222020;
  }
   
 .hero-buttons {
@@ -129,14 +124,25 @@ nav.nav_container{
     align-items: center;
 }
 
+
 .hero_buttons button{
     background-color: transparent;
-    color: rgb(255, 255, 255); 
+    color:white; 
     width: 248px;
     height: 56px;
     text-transform: uppercase;
+    font-weight: 200;
+    text-shadow: 0px 0.3px black;
+    letter-spacing: 2.2px;
     font-size: 16px;
     margin: 16px;
+}
+
+
+.hero_buttons button:hover{
+    background-color: white;
+    color: #584957;
+    cursor: pointer;
 }
 
 .container button{
@@ -152,7 +158,7 @@ nav.nav_container{
 
 .text_after_hero h2{
     width: 100%;
-    /* height: 180px; */
+    color: #584957;
     font-size: 24px;
     font-weight: 200;
     letter-spacing: 5px;
@@ -170,7 +176,6 @@ nav.nav_container{
 
 .container_box_forsida {
     display: flex;
-    /*flex-wrap: wrap;*/
     justify-content: space-between;
     position: relative;
     font-size: 32px;
@@ -191,36 +196,43 @@ nav.nav_container{
 }
 
 .box_3_4_5 .box{
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
     width: 100%;
     max-width: 448px;   
 }
 
+a {
+    text-decoration: none;
+}
+
 .box_3_4_5 img{
-    /*width: 448px;*/
     height: 475px;
+    cursor: pointer;
 }
 
 .box_3_4_5 h3{
     font-size: 24px;
-    font-weight: 100;
+    color: #584957;
+    font-weight: 200;
     text-align: center;
     width: 448px;
     padding-top: 16px;
+    cursor: pointer;
 }
+
 .box_3_4_5 p{
     font-size: 16px;
+    color: #584957;
     font-weight: 100;
     line-height: 22px;
     text-align: center;
-    width: 432px;
+    width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
-
 }
 
 .box_1{
-    background-image: url(../images/namskeid_ibodi_.png);
+    background-image: url(../images/mynd_box1.png);
     height: 544px;
     width: 919px;
     background-repeat: no-repeat;
@@ -240,9 +252,38 @@ nav.nav_container{
     font-weight: 100;
 }
 
+.time_container_carousel{
+    position: relative;
+    overflow: hidden;
+    width: 448px;
+    background-color: #584957;
+    color: #F4F0F0;
+    min-width: 448px;
+    padding-top: 24px;
+}
+.or_right{
+    background-color: transparent;
+    padding: 8px 8px;
+    border: none;
+    font-weight: 200;
+    font-size: 24px;
+    cursor: pointer;
+    color: #F4F0F0;
+}
+
+.or_left{
+    background-color: transparent;
+    padding: 8px 8px;
+    border: none;
+    font-size: 24px;
+    font-weight: 200;
+    cursor: pointer;
+    color: #F4F0F0;
+}
+
 .box_1 button{
     background-color: transparent;
-    color: #E2DEDD;
+    color: #F4F0F0;
     font-size: 24px;
     font-weight: 100;
     letter-spacing: 10px;
@@ -252,59 +293,115 @@ nav.nav_container{
     z-index: 10;  
 }
 
-.time_container{
-    
-    background-color: #584957;
-    color: #E2DEDD;
-    min-width: 448px;
-    padding-top: 24px;
-    
-
+.box_1 button:hover{
+    background-color: #F4F0F0;
+    color: #584957;
+    cursor: pointer;
 }
+
+.time_container{
+    display:flex;
+    position: absolute;
+    transition: all 1s; 
+    justify-content: center
+}
+
+.timeTableContainer_2{
+    min-width: 448px; 
+}
+
 .time_container h1{
     font-size: 24px;
     font-weight: 200;
     text-transform: uppercase; 
 }
 
-.top_container{
-    font-size: 16px;
-    padding-bottom: 40px;
+.top_container h1{
+    font-size: 32px; 
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-bottom:32px;
 }
+
+.top_container{
+    font-size: 24px;
+    font-weight: 200;
+    padding-bottom: 24px;
+}
+
 .top_container ul{
-    /*display: flex; 
-    flex-direction: row; */
     justify-content: space-between; 
     margin: 0 auto; 
 }
 
-.buttom_container{
+.bottom_container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 auto; 
+    margin: 0 auto;
+    border-bottom: 1px solid #fff;
 }
 
 .line{
-    border-bottom: 1px solid white;
     height: 48px;
+}
 
+.line.first{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 45px;
+}
+
+.line.first div {
+    display: flex;
+    align-items: center;
+    width: 140px;
+}
+
+.line.first .classOpen{
+    height: 100%;
+    width: 12px;
+    background-color: #8C288C;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.line.first .classClosed{
+    height: 100%;
+    width: 12px;
+    background-color: #444242;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.classTime {
+    margin-right: 15px;
+}
+
+
+.line.first:hover {
+    background-color: #F4F0F0;
+    color:#584957;  
 }
 
 .time_container .selected_date_border{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;  
 }
+
 
 .line span{
     font-size: 16px;
-    
-
 }
-.bottom_container .class_time .line.first{
-    border-top: 1px solid white;
 
+.bottom_container .class_time .line.first{
+    border-top: 1px solid #F4F0F0;
+    cursor: pointer;
 }
 
 
@@ -314,7 +411,7 @@ nav.nav_container{
 .frettabref_wrapper{
     height: 200px;
     width: 100%;
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
     margin-top: 88px;
     margin-bottom: 88px;
     display: flex;
@@ -332,7 +429,8 @@ nav.nav_container{
 }
 
 .frettabref_wrapper p{
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
+    color: #584957;
     font-size: 16px;
     font-weight: 100;
     padding-top: 10px;
@@ -368,8 +466,11 @@ nav.nav_container{
     font-size: 16px;
     height: 48px;
     width: 20%;
-    color: white;
+    font-weight: 300;
+    color: #F4F0F0;
     background-color: #584957;
+    cursor: pointer;
+    letter-spacing: 1px;
 
 }
 
@@ -401,33 +502,31 @@ footer{
 .logo_email h3{
     letter-spacing: 2px;
     font-weight: 300;
-    font-size: 16px;
-        
+    font-size: 16px;      
 }
     
-
 .address{
-    color: #E2DEDD;
+    color: #F4F0F0;
     bottom: 0;
-    font-size: 16px;
-    
+    font-size: 16px;   
 }
+
 .address p{
     line-height: 1.5;
     font-weight: 200;
-    font-size: 16px;
-    
+    font-size: 16px;  
 }
+
 .address h3{
     line-height: 3.5;
     font-size: 16px;
-    font-weight: 200;
-    
+    font-weight: 200;  
 }
+
 .social_media{
     margin-top: 95px;
-
 }
+
 
 
 
@@ -435,8 +534,7 @@ footer{
 /********************************************** STAKT NÁMSKEIÐ *********************************************************/
 
 .background_image {
-
-    background-image: url(../images/staktnamskeid.jpg);
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/staktnam_img.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -445,16 +543,6 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-.background_image:after {
-
-    content: "";
-    height: 60vh;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0,0,0,0.3);
 }
 
 .background_image h1 {
@@ -468,7 +556,9 @@ footer{
     padding-bottom: 32px;
     z-index: 15;
     margin-top:200px;
+    text-shadow: 0px 0.5px 0.5px #222020;
  }
+
  .gutter{
      padding:24px;
  }
@@ -482,17 +572,11 @@ footer{
      width: 100%;
  }
 
- .description_container{
-     
- }
-
-
  .description_container h1{
     font-size: 48px;
     letter-spacing: 4px;
     font-size: 48px;
     padding-bottom: 24px;
-
  }
 
  .description_container p{
@@ -500,20 +584,15 @@ footer{
     font-weight: 300px;
     line-height: 1.8;
     letter-spacing: 2px;
-    padding-bottom: 52px;
-    
-    
+    padding-bottom: 52px;   
 }
+
 .description_container{
     width: 40%;
-  
-
 }
 
 .description_container_2{
-    width: 684px;
-    
-    
+    width: 684px;   
 }
 
 .description_container_2 .description_content{
@@ -528,8 +607,8 @@ footer{
     letter-spacing: 4px;
     margin: 24px;
     text-transform: uppercase;
-   
 }
+
 .description_container_2 h3{
     font-size: 24px;
     font-weight: 200;
@@ -539,20 +618,18 @@ footer{
     line-height: 1.9;
     padding-bottom: 24px;   
 }
+
 .description_container_2 h3 span{
     font-size: 24px;
     font-weight: 700;
-  
 }
 
 .info_line{ 
     border-bottom: 2px solid #F4F0F0;
     width: 573px;
     margin-left: 24px;
-    
-
-
 }
+
 .description_container_2 h2{
     font-size: 24px;
     font-weight: 300;
@@ -574,25 +651,14 @@ footer{
     margin-bottom: 80px;
 }
 
-
-.price{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #F4F0F0;
-    width: 100%; 
-}
-
 .price_container_left{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 32px auto;
-    /* padding-left: 32px; */
+    padding-top: 72px;
     line-height: 2.3;
-    width: 30%;
-
-
+    width: 80%;
 }
 
 .price_container_left h1{
@@ -600,9 +666,9 @@ footer{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2;
-    margin-left: 32px;
-    
+    margin-left: 32px;  
 }
+
 .price_container_left h4{
     font-size: 16px;
     font-weight: 600;
@@ -620,6 +686,7 @@ footer{
     margin-left: 24px;
     font-weight: 600;
 }
+
 .price_right1 h4{
     text-transform: uppercase;
     margin-left: 24px;
@@ -635,11 +702,11 @@ footer{
 .price_container_right{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 32px auto;
-    line-height: 2;
-    width: 30%;
-    margin-left: 100px;
+    padding-top: 72px;
+    line-height: 2.3;
+    width: 100%;
 }
 
 .price_container_right1{
@@ -647,8 +714,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin: 32px auto;
-    line-height: 2;
-   
+    line-height: 2; 
 }
 
 .price_container_right2{
@@ -656,15 +722,12 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     margin: 32px auto;
-    line-height: 2;
-    
+    line-height: 2;  
 }
-
 
 span {
     font-size: 16px;
     font-weight: 300;
-
 }
 
 .class_info{
@@ -684,13 +747,13 @@ span {
     height: 48px;
     background-color: transparent;
     margin-bottom: 48px;
+    cursor: pointer;
 }
 
 .confirm_hatha:hover {
     background-color: #584957;
     color: #F4F0F0;
 }
-
 
 .icon{
     display: flex;
@@ -708,14 +771,15 @@ span {
     line-height: 2.1;
     height: 180px;
 }
+
 .color_open{
     background-color: #8C288C;
     bottom: 0 auto;
     width: 8px;
     height: 22px;
-    margin-top: 25px;
-    
+    margin-top: 25px;  
 }
+
 .first_time{
     display: flex;
     flex-direction: row;
@@ -723,18 +787,15 @@ span {
     letter-spacing: 1px;
 }
 
-.price_name_note{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .price h1{
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: 32px;
     padding-left: 24px;
 }
+
 .price_name_note{
     display: flex;
     flex-wrap: wrap;
@@ -747,53 +808,79 @@ span {
 
 
 
-
 /********************************************** Öll námskeið *********************************************************/
+.background_image {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/oll_namskeid_sida.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+
+.background_image h1 {
+    color: #F4F0F0;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 100;
+    font-size: 88px;
+    letter-spacing: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+    z-index: 15;
+    margin-top:200px;
+ }
+
+ .gutter{
+     padding:24px;
+ }
 
 
 .opening_closing_boxes{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
     height: 48px;
     margin: 24px; 
     margin-bottom: 48px;   
-
 }
+
 .opening_closing_boxes .opening{
     border-right: 16px solid #8C288C;
-
 }
 
 .opening_closing_boxes .close{
     border-right: 16px solid #444242;
-
 }
-
-
 
 .opening_closing_boxes button{
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 4px;
     width: 200px;
+    margin-left: 16px;
     color: #584957;
     height: 48px;
     background-color: transparent;
     margin-bottom: 48px;
     text-transform: uppercase;
-
+    cursor: pointer;
 }
+
 .all:hover {
     background-color: #584957;
     color: #F4F0F0;
 }
+
 .opening:hover {
     background-color: #8C288C;
     color: #F4F0F0;
 }
+
 .close:hover {
     background-color: #444242;
     color: #F4F0F0;
@@ -814,8 +901,6 @@ section.container_all_classes{
     justify-content: flex-start;
     margin: 0 auto;
     flex-wrap: wrap;
-
-
 }
 
 .open_classes{
@@ -825,18 +910,15 @@ section.container_all_classes{
     border-right: 24px solid #8C288C;
     margin-left: 24px;
     margin-bottom: 64px;
-   
-
 }
+
 .close_classes{
     width: 416px;
     height: 360px;
     background-color: #F4F0F0;
     border-right: 24px solid #444242;
     margin-left: 24px;
-    margin-bottom: 64px;
-
-    
+    margin-bottom: 64px;  
 }
 
 .open_classes h1{
@@ -893,9 +975,7 @@ section.container_all_classes{
     margin-top: 32px;
     margin-left: 22px;
     text-transform: uppercase;
- 
 }
-
 
 .open_classes button{
     font-size: 16px;
@@ -908,6 +988,7 @@ section.container_all_classes{
     background-color: transparent;
     margin-top: 32px;
     margin-left: 22px;
+    cursor: pointer;
 }
 
 .open_classes button:hover {
@@ -923,14 +1004,13 @@ section.container_all_classes{
 span .purple_color_line{
     border-bottom: 2px solid #8C288C;
     height: 20px;
-    width: 300px;
-    
+    width: 300px;  
 }
+
 span .dark_color_line{
     border-bottom: 2px solid #444242;
     height: 20px;
-    width: 300px;
-    
+    width: 300px;   
 }
 
 .container_new_members{
@@ -943,15 +1023,17 @@ span .dark_color_line{
     text-transform: uppercase;
     width: 100%;
     margin-top: 32px;
+    cursor: pointer;
 }
+
 .container_new_members h1{
     font-size: 24px;
     letter-spacing: 6px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 100;
-
 }
+
 .container_new_members:hover{
     background-color: #584957;
     color: #F4F0F0;
@@ -959,7 +1041,38 @@ span .dark_color_line{
 
 /********************************************** Kennarar *********************************************************/
 
+.background_image {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/starfs_mynd.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.background_image h1 {
+    color: #F4F0F0;
+    font-family: Roboto, sans-serif !important;
+    font-weight: 100;
+    font-size: 88px;
+    letter-spacing: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+    z-index: 15;
+    margin-top:200px;
+ }
+
+ .gutter{
+     padding:24px;
+ }
+
+ .teachers_container:hover #overlay{
+    opacity: 0.8;
+ }
 
 section.container_all_teachers{
     width: 100%;
@@ -974,21 +1087,46 @@ section.container_all_teachers{
     margin-top: 80px;
 }
 
+#overlay{ 
+    position: absolute;
+    display: flex;
+    width: 330px;
+    height: 320px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #584957;
+}
+
+#overlay .text{
+    color: #F4F0F0;
+    font-size: 32px;
+    margin: 150px auto;
+    text-align: center;
+    font-weight: 200;
+    font-family: Roboto, sans-serif; 
+    text-shadow: 0px 0.5px 0.5px #222020;  
+}
+
+.container_all_teachers .teachers_container:nth-child(4n){
+    margin-right:0px;
+}
+
 
 .teachers_container{
     width: 328px;
-    /* height: 420px; */
+    position: relative;
     color: #584957;
-    margin-left: 24px;
-    margin-bottom: 48px;
-    /* margin-top: 80px; */
+    margin-right: 24px;
+    margin-bottom: 48px;  
+}
+
+.teachers_container.last{
+    margin-right: 0;
 }
 
 .teachers_container img{
     width: 330px;
-    height: 320px;
-    
-    
+    height: 320px;   
 }
 
 .teachers_container h1{
@@ -1008,17 +1146,18 @@ section.container_all_teachers{
     margin-bottom: 8px;
     text-transform: uppercase;   
 }
-/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxxxxxxxxxxxx*/
-.teachers_container img:hover {
-    background-color: #8C288C;
-}
-/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxx*/
-.teachers_container img:hover  {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.7s;
-}
 
 
+#nav-menu > ul > li > button {
+    display: none;
+  }
+
+
+/* Þetta er fyrir mobile menu */
+
+#nav-menu > ul > li > button {
+    display: none;
+  }
 
 
 
@@ -1029,6 +1168,23 @@ section.container_all_teachers{
     
     .nav_container .nav_inner ul{
         display: none;
+    }
+
+    #nav-menu{
+        padding: 1em;
+        list-style: none;
+        color: #F4F0F0;
+        font-family: roboto, san serif;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    nav.nav_container .nav_inner a{
+        font-weight: 200;
+        letter-spacing: 2px;
     }
 
     .jogasetur_logo {
@@ -1045,7 +1201,7 @@ section.container_all_teachers{
         margin: 0 auto;
         border: none;
         min-width: auto;
-        z-index: 9999; 
+        z-index: 99;
     }
 
     nav.nav_container .nav_inner{
@@ -1062,7 +1218,6 @@ section.container_all_teachers{
 
     .hamburger{
         display: block;
-        margin-right: 40px;
         
     }
 
@@ -1085,9 +1240,13 @@ section.container_all_teachers{
         margin: 0 auto;
      }
 
+     .top_container{
+        padding-right: 32px;
+     }
+
     .box_1 {
         background-image: url(../images/namskeid_ibodi_.png);
-        height: 450px;
+        height: 410px;
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1096,20 +1255,25 @@ section.container_all_teachers{
     }
 
     .time_container {
-        background-color: #584957;
-        color: #E2DEDD;
         padding-top: 24px;
-        width: 100%;
         min-width: auto;
+        justify-content: center;
     }
-    
 
+    .timeTableContainer_2 {
+        min-width: 415px;
+    }
+
+    .bottom_container{
+        margin-right: 4px;
+    }
+
+    
     .box_1 button {
         background-color: transparent;
-        color: #E2DEDD;
+        color: #F4F0F0;
         font-size: 16;
         font-weight: 200;
-        text-shadow: 2px 2px 4px #000000;
         line-height: 32px;
         letter-spacing: 10;
         text-transform: uppercase;
@@ -1126,51 +1290,28 @@ section.container_all_teachers{
 
     .text_after_hero h2{
         font-size: 16px;
+        line-height: 1.9;
+        padding-top: 8px;
     }
 
     .hero_buttons{
         display: flex;
         flex-direction: column;
+        margin-bottom: 55px;
     }
 
-    footer {
-        /* height: 192px; */
-        background-color: #584957;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        height: auto;
+    .time_container_carousel{
+        min-width: 0;
+        height: 524px;
+        margin-top: 24px;
     }
 
-    .container_footer{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        justify-content: space-between;
+    .line.first {
+        margin-right: 36px;
     }
 
-    .address{
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom:40px;
-    }
-
-    .address h3 {
-        line-height: 3.5;
-        font-size: 24px;
-        font-weight: 200;
-    }
-
-    .logo_email{
-        color: #F4F0F0;
-        line-height: 3;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .social_media{
-        margin: 0 auto;
-        margin-top: 30px;
+    .line.first div{
+        width:140px;
     }
 
     .box_3_4_5 {
@@ -1178,14 +1319,14 @@ section.container_all_teachers{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 88%;
+        width: 100%;
         max-width: none;
-        margin: 0 auto;
+        margin: 0 auto; 
     }
 
     .box_3_4_5 img{
         height: 300px;
-        width: 100%;
+        width: 100%;  
     }
 
     .box_3_4_5 p{
@@ -1196,6 +1337,7 @@ section.container_all_teachers{
     .box_3_4_5 .box {
         width: 100%;
         max-width: none;
+        margin-top: 24px;
     }
 
     .box_3_4_5 .box h3{
@@ -1238,7 +1380,7 @@ section.container_all_teachers{
 
     .background_image h1 {
         font-size: 58px;
-        text-shadow:0.5px 0.5px 0.5px #000000;
+        /*text-shadow:0.5px 0.5px 0.5px #000000;*/
     }
 
     .information{
@@ -1287,8 +1429,9 @@ section.container_all_teachers{
     }
 
     .color_open{
-        height: 40px;
+        height: 32px;
         margin-top:-66px;
+        margin-bottom:20px    
     }
 
     .description_container_2 h2{
@@ -1301,9 +1444,7 @@ section.container_all_teachers{
         display: flex;
         flex-direction: column;
         padding-left: 30px;
-
     }
-
 
     .first_time h2{
         padding-left:25px;
@@ -1335,7 +1476,8 @@ section.container_all_teachers{
     .price_container_left{
     
         padding-left: none;
-        width: 100%;      
+        width: 100%;
+        padding-top: 0;      
     }
 
     .price_container_right{
@@ -1343,6 +1485,7 @@ section.container_all_teachers{
         width: 100%;
         margin-left: none;
         margin-left: 0px;
+        padding-top: 0;
     }
 
 
@@ -1375,16 +1518,21 @@ section.container_all_teachers{
     
     .teachers_container{
         flex-direction: column;
-        margin-left: 0px;
-        width: 100%;
-       
-         
+        margin-right: 0px;
+        width: 100% !important;
+        height: auto;
+           
     }
     
     .teachers_container img{
         width: 100%;
-
+        height: 320px;
     }
+
+    #overlay {
+        width:100%;
+    }
+
 
     /*  ÖLL NÁMSKEIÐ BYRJA HÉR  */
 
@@ -1393,13 +1541,14 @@ section.container_all_teachers{
         flex-direction: column;
         justify-content: space-between;
         margin: 0 auto;
-        height: auto;
-        
+        height: auto;  
+    }
 
-    }.opening_closing_boxes button{
+    .opening_closing_boxes button{
 
-        width: auto;
+        width: 100%;
         margin-bottom: 15px;
+        margin: 16px auto;
     }
 
     .container_all_classes{
@@ -1408,6 +1557,7 @@ section.container_all_teachers{
         height: auto;
         margin-left: 0px;
     }
+
     .open_classes button{
         margin: 15px auto;
         margin-left: 20px;
@@ -1434,6 +1584,103 @@ section.container_all_teachers{
         margin: 15px auto;
         margin-left: 20px;
     }
+
+
+
+/* Hér er footer */
+    footer {
+        background-color: #584957;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+}
+
+    .container_footer{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: space-between;
+}
+
+    .address{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom:40px;
+}
+
+    .address h3 {
+        line-height: 3.5;
+        font-size: 24px;
+        font-weight: 200;
+}
+
+    .logo_email{
+        color: #F4F0F0;
+        line-height: 3;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .social_media{
+        margin: 0 auto;
+        margin-top: 30px;
+}
+
+    .container_footer a{
+        margin:0 auto
+}
+
+/* þetta er menu bar fyrir mobile  */
+  
+   #nav-menu {
+    display: none;
+  }
+  #nav-button.expanded {
+    display: none;
+  }
+
+  #nav-menu.expanded {
+    display: block;
+  }
+
+  #nav-menu.expanded ul {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #584957;
+  }
+
+  #nav-menu.expanded > ul > li > button {
+    position: absolute;
+    right: 10px;
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-image: url('../images/close_menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: 0px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 16px;
+    height: 40px;
+    width: 40px;
+    background-image: url('../images/hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: 1px;
+    z-index: 500;
+  }
+
+
 
 
    
