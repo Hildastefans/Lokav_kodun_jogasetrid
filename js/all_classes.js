@@ -88,11 +88,9 @@ var allClassesArrayVariable = [
     }
 ] // array af námskeiðum
 
-// sækja eða ná í námskeiðin í arrey
-var containerAllClassesElement = document.getElementById("container_all_classes")
-
 /** functions **/
 var displayAllClassesFunction = function(allClassesParameter){
+    var containerAllClassesElement = document.getElementById("container_all_classes")
     containerAllClassesElement.innerHTML = ""; // Tæma það sem er í container
 
     for(var i = 0; i<allClassesParameter.length;i++){
@@ -108,6 +106,7 @@ var displayAllClassesFunction = function(allClassesParameter){
         divClass = "close_classes"
      }
     /** bæta við container-inn auka námskeiði */
+    var containerAllClassesElement = document.getElementById("container_all_classes")
     containerAllClassesElement.innerHTML += `
         <div class= ${divClass} >
             <h1>${jogaClassParameter.title}</h1>
@@ -116,16 +115,6 @@ var displayAllClassesFunction = function(allClassesParameter){
         </div>
         `   
 }
-
-// Kalla í fallið ef ég er á námskeiðasíðunni
-if (containerAllClassesElement !== null) {
-    displayAllClassesFunction(allClassesArrayVariable)
-}
-
-var allClassesButtonElement = document.getElementById("all_classes_button")
-var openClassesButtonElement = document.getElementById("open_classes_button")
-var closeClassesButtonElement = document.getElementById("close_classes_button")
-
 
 var onAllClassesButtonClick = function(){
     displayAllClassesFunction(allClassesArrayVariable)
@@ -155,12 +144,17 @@ var filterClassesByTypeFunction = function(typeParameter) {
     return filteredClassesResultVariable
 }
 
+var connectAllClassesPageFunction = function () {
+    var allClassesButtonElement = document.getElementById("all_classes_button")
+    var openClassesButtonElement = document.getElementById("open_classes_button")
+    var closeClassesButtonElement = document.getElementById("close_classes_button")
 
-allClassesButtonElement.onclick = onAllClassesButtonClick
-openClassesButtonElement.onclick = onOpenClassesButtonClick
-closeClassesButtonElement.onclick = onCloseClassesButtonClick
+    allClassesButtonElement.onclick = onAllClassesButtonClick
+    openClassesButtonElement.onclick = onOpenClassesButtonClick
+    closeClassesButtonElement.onclick = onCloseClassesButtonClick
 
+    displayAllClassesFunction(allClassesArrayVariable)
+}
 
-
-
-//XXXXXXXXXXXXXXXXXXXXXX  HÉR ERU KENNARAR  XXXXXXXXXXXXXXXXXXXXX
+// Taka út þegar html-ið afrituð í pages
+if (document.getElementById("all_classes_button")) connectAllClassesPageFunction()

@@ -1,14 +1,16 @@
 // þetta er fyrir menu mobile --------- 
 
-const navMenuButtonElement = document.getElementById('nav-button')
-const closeNavMenuButtonElement = document.getElementById('close-nav-button')
-const navMenuElement = document.getElementById('nav-menu')
-navMenuButtonElement.addEventListener('click', onNavMenuButtonClick)
-closeNavMenuButtonElement.addEventListener('click', onCloseNavMenuButtonClick)
+var navMenuButtonElement = document.getElementById('nav-button')
+var closeNavMenuButtonElement = document.getElementById('close-nav-button')
+var navMenuElement = document.getElementById('nav-menu')
+var navListElement = document.getElementsByClassName('nav-list')
+
+navMenuButtonElement.onclick = onNavMenuButtonClick
+closeNavMenuButtonElement.onclick = onCloseNavMenuButtonClick
+navMenuElement.onclick = onCloseNavMenuButtonClick
 
 var activeClass = 'expanded'
 function onNavMenuButtonClick(e) {
-    console.log('click')
   navMenuButtonElement.classList.add(activeClass)
   navMenuElement.classList.add(activeClass)
 }
