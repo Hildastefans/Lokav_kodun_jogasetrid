@@ -327,7 +327,6 @@ a {
     font-size: 24px;
     font-weight: 200;
     padding-bottom: 24px;
-    padding-right: 35px;
 }
 
 .top_container ul{
@@ -1241,9 +1240,13 @@ section.container_all_teachers{
         margin: 0 auto;
      }
 
+     .top_container{
+        padding-right: 32px;
+     }
+
     .box_1 {
         background-image: url(../images/namskeid_ibodi_.png);
-        height: 450px;
+        height: 410px;
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1287,6 +1290,8 @@ section.container_all_teachers{
 
     .text_after_hero h2{
         font-size: 16px;
+        line-height: 1.9;
+        padding-top: 8px;
     }
 
     .hero_buttons{
