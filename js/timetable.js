@@ -175,74 +175,6 @@ var timetableArray = [
     ,
 ]
 
-// Þetta er fyrir Tímar í dag á forsíðu að hann sýni í námskeið sem opið eða lokað með lit á forsíðu.
-var isClassOpenFunction = function(classNameParameter){
-
-    for(var i = 0; i < allClassesArrayVariable.length; i++){
-        if(classNameParameter === allClassesArrayVariable[i].title){
-            if(allClassesArrayVariable[i].type === "open"){
-                return true
-            } else {
-                return false
-            }
-        }
-    }
-}
-
-// sækja element-ið til að setja inn 
-var timetableElement = document.querySelector("#time_container")
-
-for(var i = 0; i<timetableArray.length; i++){
-    var timetableArrayTemplete=`
-    <div class="timeTableContainer_2">
-        <div class="top_container">
-            <h1>Tímar í dag</h1>
-            <div class="selected_date_border"></div>
-            <ul>
-                <li>${timetableArray[i].weekday}</li>
-                
-            </ul>
-            <button onclick="changeDayFunction(1)" class="or_left">&#60;</button>
-            <button onclick="changeDayFunction(-1)" class="or_right">&#62;</button>
-        </div>
-
-        <div class="bottom_container">
-            <div class="class_time"> 
-    `
-
-    for( var j = 0; j<timetableArray[i].classes.length; j++){
-        var isOpenFunctionArgument = timetableArray[i].classes[j].name
-        // Kalla í fallið sem skilar true ef námskeiðið er opið, annars false
-        var isOpen = isClassOpenFunction(isOpenFunctionArgument)
-        var classDiv
-        
-        if(isOpen){
-            classDiv = `<div class="classOpen"></div>`
-        } else {
-            classDiv = `<div class="classClosed"></div>`
-        }
-        
-        timetableArrayTemplete += `
-            <div class="line first">
-                <div class="class_time_text_container">
-                    <span class="classTime">${timetableArray[i].classes[j].hours}</span>
-                </div>
-                <div class="class_time_text_container">
-                    <span>${timetableArray[i].classes[j].name}</span>
-                </div>
-                ${classDiv}
-            </div>
-        `   
-    } // innri for loopa endar
-
-    timetableArrayTemplete += `
-            </div>
-        </div>
-    </div>
-    `
-    timetableElement.innerHTML += timetableArrayTemplete;
-}
-
 var moveWidth = 448;
 
 if(window.innerWidth < 500){
@@ -251,9 +183,9 @@ if(window.innerWidth < 500){
 
 var moveDayNumber = 0;
 var weekdayPosition = 0;
-timetableElement.style.left = "0px";
 
 var changeDayFunction = function(directionParameter){
+    var timetableElement = document.querySelector("#time_container")
     weekdayPosition += directionParameter
     
     if (weekdayPosition === -7) {
@@ -284,9 +216,83 @@ var changeDayFunction = function(directionParameter){
     }
 }
 
-// Upphafsstilla á daginn í dag
-var today = new Date()
-var dayOfWeek = today.getDay()
-changeDayFunction(-dayOfWeek)
+// Þetta er fyrir Tímar í dag á forsíðu að hann sýni í námskeið sem opið eða lokað með lit á forsíðu.
+var isClassOpenFunction = function(classNameParameter){
+
+    for(var i = 0; i < allClassesArrayVariable.length; i++){
+        if(classNameParameter === allClassesArrayVariable[i].title){
+            if(allClassesArrayVariable[i].type === "open"){
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+}
+
+var showTimetableFunction = function() {
+    // sækja element-ið til að setja inn 
+    var timetableElement = document.querySelector("#time_container")
+
+    for(var i = 0; i<timetableArray.length; i++){
+        var timetableArrayTemplete=`
+        <div class="timeTableContainer_2">
+            <div class="top_container">
+                <h1>Tímar í dag</h1>
+                <div class="selected_date_border"></div>
+                <ul>
+                    <li>${timetableArray[i].weekday}</li>
+                    
+                </ul>
+                <button onclick="changeDayFunction(1)" class="or_left">&#60;</button>
+                <button onclick="changeDayFunction(-1)" class="or_right">&#62;</button>
+            </div>
+
+            <div class="bottom_container">
+                <div class="class_time"> 
+        `
+
+        for( var j = 0; j<timetableArray[i].classes.length; j++){
+            var isOpenFunctionArgument = timetableArray[i].classes[j].name
+            // Kalla í fallið sem skilar true ef námskeiðið er opið, annars false
+            var isOpen = isClassOpenFunction(isOpenFunctionArgument)
+            var classDiv
+            
+            if(isOpen){
+                classDiv = `<div class="classOpen"></div>`
+            } else {
+                classDiv = `<div class="classClosed"></div>`
+            }
+            
+            timetableArrayTemplete += `
+                <div class="line first">
+                    <div class="class_time_text_container">
+                        <span class="classTime">${timetableArray[i].classes[j].hours}</span>
+                    </div>
+                    <div class="class_time_text_container">
+                        <span>${timetableArray[i].classes[j].name}</span>
+                    </div>
+                    ${classDiv}
+                </div>
+            `   
+        } // innri for loopa endar
+
+        timetableArrayTemplete += `
+                </div>
+            </div>
+        </div>
+        `
+        timetableElement.innerHTML += timetableArrayTemplete;
+    }
+
+    // Upphafsstilla á daginn í dag
+    var today = new Date()
+    var dayOfWeek = today.getDay()
+    changeDayFunction(-dayOfWeek)
+}
+
+
+
+
 
 

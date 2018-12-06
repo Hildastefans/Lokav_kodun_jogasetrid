@@ -1,5 +1,4 @@
 // Array fyrir Kennara
-
 var teachersArrayVariable = [
     {
         img: `images/audur.png`,
@@ -72,19 +71,10 @@ var teachersArrayVariable = [
         name: `BÁRA GUÐNADÓTTIR`,
         description: `MJÚKT JÓGA OG JÓGA NIDRA`,
     }
-      
-
 ]
 
-
-var containerAllTeachersElement = document.getElementById("container_all_teachers")
-
 var displayAllTeachersFunction = function(allTeachersArrayParameter) {
-     // Ef elementið er til á síðunni þá skrifa út alla kennara
-    if (containerAllTeachersElement === null) {
-        return
-     }
-
+    var containerAllTeachersElement = document.getElementById("container_all_teachers")
     containerAllTeachersElement.innerHTML= ""; // hérna tæmi ég containerinn
 
 
@@ -103,7 +93,12 @@ var displayTeacherFunction = function(teacherParameter) {
         <p>${teacherParameter.description}</p>
     </div>
     `
+    var containerAllTeachersElement = document.getElementById("container_all_teachers")
     containerAllTeachersElement.innerHTML += teacherHtmlVariable
 }
 
-displayAllTeachersFunction(teachersArrayVariable)
+var connectTeachersPageFunction = function() {
+    displayAllTeachersFunction(teachersArrayVariable)
+}
+
+if(document.getElementById("container_all_teachers")) connectTeachersPageFunction()
