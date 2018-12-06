@@ -205,13 +205,13 @@ var changeDayFunction = function(directionParameter){
 
     timetableElement.style.left = moveDayNumber + mobileFix + "px";
 
-    if(moveDayNumber <= timetableArray.length*move* -1){
+    if(moveDayNumber <= timetableArray.length*moveWidth* -1){
        /* timetableElement.style.transition = "all 0s";*/
         timetableElement.style.left ="0px";
         moveDayNumber=0;
         setTimeout(()=> {
             timetableElement.transition = "all 2s";
-            moveDayNumber += moveWidth*direction;
+            moveDayNumber += moveWidth*directionParameter;
             timetableElement.style.left = moveDayNumber + "px";
             },200);
   

@@ -88,7 +88,7 @@ var displayTeacherFunction = function(teacherParameter) {
     // console.log(teacherParameter) athuga 
     var teacherHtmlVariable = `
     <div class="teachers_container">
-    <div id="overlay"><p class="text">Nánar</p></div>
+    <div id="overlay"><a href= "#"<p class="text">Nánar</p></a></div>
     <img class=image src="${teacherParameter.img}" alt="teacher">
         <h1>${teacherParameter.name}</h1>
         <p>${teacherParameter.description}</p>
