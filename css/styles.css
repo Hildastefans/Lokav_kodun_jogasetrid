@@ -109,7 +109,7 @@ nav.nav_container{
     }*/
 
 .hero_content {
-    padding-top: 130px;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,6 +209,10 @@ nav.nav_container{
     background-color: #E2DEDD;
     width: 100%;
     max-width: 448px;   
+}
+
+a {
+    text-decoration: none;
 }
 
 .box_3_4_5 img{
@@ -994,7 +998,6 @@ section.container_all_classes{
     text-transform: uppercase;
 }
 
-
 .open_classes button{
     font-size: 16px;
     font-weight: 300;
@@ -1021,14 +1024,13 @@ section.container_all_classes{
 span .purple_color_line{
     border-bottom: 2px solid #8C288C;
     height: 20px;
-    width: 300px;
-    
+    width: 300px;  
 }
+
 span .dark_color_line{
     border-bottom: 2px solid #444242;
     height: 20px;
-    width: 300px;
-    
+    width: 300px;   
 }
 
 .container_new_members{
@@ -1043,14 +1045,15 @@ span .dark_color_line{
     margin-top: 32px;
     cursor: pointer;
 }
+
 .container_new_members h1{
     font-size: 24px;
     letter-spacing: 6px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 100;
-
 }
+
 .container_new_members:hover{
     background-color: #584957;
     color: #F4F0F0;
@@ -1069,7 +1072,6 @@ span .dark_color_line{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .background_image h1 {
@@ -1089,8 +1091,9 @@ span .dark_color_line{
      padding:24px;
  }
 
-
-
+ .teachers_container:hover #overlay{
+    opacity: 0.8;
+ }
 
 section.container_all_teachers{
     width: 100%;
@@ -1105,6 +1108,26 @@ section.container_all_teachers{
     margin-top: 80px;
 }
 
+#overlay{ 
+    position: absolute;
+    display: flex;
+    width: 330px;
+    height: 320px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #584957;
+}
+
+#overlay .text{
+    color: white;
+    font-size: 24px;
+    margin: 150px auto;
+    text-align: center;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;   
+}
+
+
 .container_all_teachers .teachers_container:nth-child(4n){
     margin-right:0px;
 }
@@ -1112,11 +1135,12 @@ section.container_all_teachers{
 
 .teachers_container{
     width: 328px;
+    position: relative;
     /* height: 420px; */
     color: #584957;
     margin-right: 24px;
     margin-bottom: 48px;
-    /* margin-top: 80px; */
+    /* margin-top: 80px; */   
 }
 
 .teachers_container.last{
@@ -1125,9 +1149,7 @@ section.container_all_teachers{
 
 .teachers_container img{
     width: 330px;
-    height: 320px;
-    
-    
+    height: 320px;   
 }
 
 .teachers_container h1{
@@ -1152,18 +1174,6 @@ section.container_all_teachers{
 #nav-menu > ul > li > button {
     display: none;
   }
-/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxxxxxxxxxxxx*/
-/*.teachers_container img:hover {
-    background-color: #8C288C;*/
-
-/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxx*/
-/*.teachers_container img:hover  {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.7s;
-}*/
-
-
-
 
 
 /* Þetta er fyrir mobile menu */
@@ -1177,10 +1187,6 @@ section.container_all_teachers{
 
 
 
-
-
-
-
 /* @MEDIA XXXXXXXXXXXX  @MEDIA XXXXXXXXXXXX @MEDIA  XXXXXXXXXXXX @MEDIA */
 @media screen and (max-width: 500px) 
 {
@@ -1188,6 +1194,23 @@ section.container_all_teachers{
     
     .nav_container .nav_inner ul{
         display: none;
+    }
+
+    #nav-menu{
+        padding: 1em;
+        list-style: none;
+        color: white;
+        font-family: roboto, san serif;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    nav.nav_container .nav_inner a{
+        font-weight: 200;
+        letter-spacing: 2px;
     }
 
     .jogasetur_logo {
@@ -1222,10 +1245,6 @@ section.container_all_teachers{
     .hamburger{
         display: block;
         
-    }
-
-    .nav_list{
-
     }
 
     .logo-column{
@@ -1297,8 +1316,8 @@ section.container_all_teachers{
 
     .hero_buttons{
         display: flex;
-        flex-direction: column; 
-        margin:8px;  
+        flex-direction: column;
+        margin-bottom: 55px;
     }
 
     .time_container_carousel{
@@ -1320,7 +1339,7 @@ section.container_all_teachers{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 88%;
+        width: 100%;
         max-width: none;
         margin: 0 auto; 
     }
@@ -1338,6 +1357,7 @@ section.container_all_teachers{
     .box_3_4_5 .box {
         width: 100%;
         max-width: none;
+        margin-top: 24px;
     }
 
     .box_3_4_5 .box h3{
@@ -1545,8 +1565,9 @@ section.container_all_teachers{
 
     .opening_closing_boxes button{
 
-        width: auto;
+        width: 100%;
         margin-bottom: 15px;
+        margin: 16px auto;
     }
 
     .container_all_classes{

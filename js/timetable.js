@@ -176,9 +176,11 @@ var timetableArray = [
 ]
 
 var moveWidth = 448;
+var mobileFix = 0
 
 if(window.innerWidth < 500){
-    moveWidth = 419
+    moveWidth = 415
+    mobileFix = -12
 }
 
 var moveDayNumber = 0;
@@ -201,13 +203,13 @@ var changeDayFunction = function(directionParameter){
         moveDayNumber += moveWidth * directionParameter;
     }
 
-    timetableElement.style.left = moveDayNumber + "px";
+    timetableElement.style.left = moveDayNumber + mobileFix + "px";
 
     if(moveDayNumber <= timetableArray.length*move* -1){
        /* timetableElement.style.transition = "all 0s";*/
         timetableElement.style.left ="0px";
         moveDayNumber=0;
-        setTimeout(()=>{
+        setTimeout(()=> {
             timetableElement.transition = "all 2s";
             moveDayNumber += moveWidth*direction;
             timetableElement.style.left = moveDayNumber + "px";
