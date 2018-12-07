@@ -73,18 +73,18 @@ var teachersArrayVariable = [
     }
 ]
 
-var displayAllTeachersFunction = function(allTeachersArrayParameter) {
+var renderAllTeachersFunction = function(allTeachersArrayParameter) {
     var containerAllTeachersElement = document.getElementById("container_all_teachers")
     containerAllTeachersElement.innerHTML= ""; // hérna tæmi ég containerinn
 
 
     for( var i = 0; i<allTeachersArrayParameter.length; i++){
         var teacher = allTeachersArrayParameter[i]
-        displayTeacherFunction(teacher)
+        renderTeacherCardFunction(teacher)
     }
 }
 
-var displayTeacherFunction = function(teacherParameter) {
+var renderTeacherCardFunction = function(teacherParameter) {
     // console.log(teacherParameter) athuga 
     var teacherHtmlVariable = `
     <div class="teachers_container">
@@ -99,7 +99,7 @@ var displayTeacherFunction = function(teacherParameter) {
 }
 
 var connectTeachersPageFunction = function() {
-    displayAllTeachersFunction(teachersArrayVariable)
+    renderAllTeachersFunction(teachersArrayVariable)
 }
 
 if(document.getElementById("container_all_teachers")) connectTeachersPageFunction()
