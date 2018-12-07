@@ -79,6 +79,11 @@ nav.nav_container .nav_inner a {
   font-size: 16px;
   text-shadow: 0.5px 0.5px 0.5px #222020;
   
+  
+}
+
+nav.nav_container .nav_inner a:hover {
+    border-bottom: 1px solid white;
 }
 
 nav.nav_container{

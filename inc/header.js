@@ -17,7 +17,7 @@ headerElement.innerHTML = `
           <li><a href="#" class="nav-item" onclick="showTeachersPageFunction()">Um okkur</a</li>
           <li><a href="#" class="nav-item">Stundaskrá</a></li>
           <li><a href="#" class="nav-item" onclick="showAllClassesPageFunction()">Námskeið</a></li>
-          <li><a href="#" class="nav-item">Meðgöngujóga</a></li>
+          <li><a href="#" class="nav-item" onclick="renderSingleClass('Meðgöngujóga')">Meðgöngujóga</a></li>
           <li><a href="#" class="nav-item">Kennaranám</a></li>
           <li><a href="#" class="nav-item">Verðskrá</a></li>
           <li><a href="#"><img src="images/leit.svg" /></a></li>
