@@ -176,9 +176,11 @@ var timetableArray = [
 ]
 
 var moveWidth = 448;
+var mobileFix = 0
 
 if(window.innerWidth < 500){
-    moveWidth = 419
+    moveWidth = 415
+    mobileFix = -12
 }
 
 var moveDayNumber = 0;
@@ -201,15 +203,15 @@ var changeDayFunction = function(directionParameter){
         moveDayNumber += moveWidth * directionParameter;
     }
 
-    timetableElement.style.left = moveDayNumber + "px";
+    timetableElement.style.left = moveDayNumber + mobileFix + "px";
 
-    if(moveDayNumber <= timetableArray.length*move* -1){
+    if(moveDayNumber <= timetableArray.length*moveWidth* -1){
        /* timetableElement.style.transition = "all 0s";*/
         timetableElement.style.left ="0px";
         moveDayNumber=0;
-        setTimeout(()=>{
+        setTimeout(()=> {
             timetableElement.transition = "all 2s";
-            moveDayNumber += moveWidth*direction;
+            moveDayNumber += moveWidth*directionParameter;
             timetableElement.style.left = moveDayNumber + "px";
             },200);
   
@@ -217,10 +219,10 @@ var changeDayFunction = function(directionParameter){
 }
 
 // Þetta er fyrir Tímar í dag á forsíðu að hann sýni í námskeið sem opið eða lokað með lit á forsíðu.
-var isClassOpenFunction = function(classNameParameter){
+var isClassOpenFunction = function(classTitleParameter){
 
     for(var i = 0; i < allClassesArrayVariable.length; i++){
-        if(classNameParameter === allClassesArrayVariable[i].title){
+        if(classTitleParameter === allClassesArrayVariable[i].title){
             if(allClassesArrayVariable[i].type === "open"){
                 return true
             } else {

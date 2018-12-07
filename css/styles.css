@@ -23,11 +23,12 @@ header{
     padding-left: 10px
 }
 .nav_inner a{
-    color:white;
+    color:white
 }
 
 .jogasetur_logo{
     height: 88px;
+    z-index: 66;
 }
 
 nav.nav_container {
@@ -39,7 +40,6 @@ nav.nav_container {
     align-items: center; 
     justify-content: space-between;
     margin: 0 auto;
-    /* text-transform: uppercase; */
     border: none;
     z-index: 99;
 }
@@ -72,22 +72,23 @@ nav.nav_container .nav_inner a {
   padding-left:.7em;
   padding-right:.7em;
   color: white;
+  font-family: roboto, san serif;
+  letter-spacing: 1px;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 200;
+  font-size: 16px;
+  text-shadow: 0.5px 0.5px 0.5px #222020;
+  
 }
 
-
-/* hefur áhrifa á logo staðsetningu */
 nav.nav_container{
     width: 95%;
 }
   
 /* hér er hero mynd, texti og 3 buttons */
-
-  
+ 
 .hero_container {
-    /*background-image: url("../images/hero_image_1.jpg");*/
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/forsidumynd_x1.png");
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url("../images/forsidumynd_x1.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -99,32 +100,22 @@ nav.nav_container{
 
   }
 
-/*.hero_container:after {
-
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0,0,0,0.3);
-    }*/
-
 .hero_content {
-    padding-top: 130px;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*z-index: 17;*/
 }
   
 .hero_content h1 {
-    color: #fff;
+    color: white;
     font-weight: 100;
     font-size: 88px;
     letter-spacing: 8px;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 32px;
-    /*z-index: 15;*/
+    text-shadow: 0px 0.5px 0.5px #222020;
  }
   
 .hero-buttons {
@@ -136,7 +127,7 @@ nav.nav_container{
 
 .hero_buttons button{
     background-color: transparent;
-    color: rgb(255, 255, 255); 
+    color:white; 
     width: 248px;
     height: 56px;
     text-transform: uppercase;
@@ -149,7 +140,7 @@ nav.nav_container{
 
 
 .hero_buttons button:hover{
-    background-color: #F4F0F0;
+    background-color: white;
     color: #584957;
     cursor: pointer;
 }
@@ -163,11 +154,11 @@ nav.nav_container{
 
 
 
-/* texti undir forsíðu */
+/* TEXTI UNDIR HERO MYND */
 
 .text_after_hero h2{
     width: 100%;
-    /* height: 180px; */
+    color: #584957;
     font-size: 24px;
     font-weight: 200;
     letter-spacing: 5px;
@@ -185,7 +176,6 @@ nav.nav_container{
 
 .container_box_forsida {
     display: flex;
-    /*flex-wrap: wrap;*/
     justify-content: space-between;
     position: relative;
     font-size: 32px;
@@ -206,20 +196,24 @@ nav.nav_container{
 }
 
 .box_3_4_5 .box{
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
     width: 100%;
     max-width: 448px;   
 }
 
+a {
+    text-decoration: none;
+}
+
 .box_3_4_5 img{
-    /*width: 448px;*/
     height: 475px;
     cursor: pointer;
 }
 
 .box_3_4_5 h3{
     font-size: 24px;
-    font-weight: 100;
+    color: #584957;
+    font-weight: 200;
     text-align: center;
     width: 448px;
     padding-top: 16px;
@@ -228,6 +222,7 @@ nav.nav_container{
 
 .box_3_4_5 p{
     font-size: 16px;
+    color: #584957;
     font-weight: 100;
     line-height: 22px;
     text-align: center;
@@ -257,13 +252,12 @@ nav.nav_container{
     font-weight: 100;
 }
 
-/* þessi var bætt við í ATH á eftir að stíla */
 .time_container_carousel{
     position: relative;
     overflow: hidden;
     width: 448px;
     background-color: #584957;
-    color: #E2DEDD;
+    color: #F4F0F0;
     min-width: 448px;
     padding-top: 24px;
 }
@@ -289,7 +283,7 @@ nav.nav_container{
 
 .box_1 button{
     background-color: transparent;
-    color: #E2DEDD;
+    color: #F4F0F0;
     font-size: 24px;
     font-weight: 100;
     letter-spacing: 10px;
@@ -333,12 +327,9 @@ nav.nav_container{
     font-size: 24px;
     font-weight: 200;
     padding-bottom: 24px;
-    padding-right: 35px;
 }
 
 .top_container ul{
-    /*display: flex; 
-    flex-direction: row; */
     justify-content: space-between; 
     margin: 0 auto; 
 }
@@ -354,7 +345,6 @@ nav.nav_container{
 .line{
     height: 48px;
 }
-
 
 .line.first{
     cursor: pointer;
@@ -395,7 +385,7 @@ nav.nav_container{
 
 
 .line.first:hover {
-    background-color: #fff;
+    background-color: #F4F0F0;
     color:#584957;  
 }
 
@@ -410,7 +400,7 @@ nav.nav_container{
 }
 
 .bottom_container .class_time .line.first{
-    border-top: 1px solid white;
+    border-top: 1px solid #F4F0F0;
     cursor: pointer;
 }
 
@@ -421,7 +411,7 @@ nav.nav_container{
 .frettabref_wrapper{
     height: 200px;
     width: 100%;
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
     margin-top: 88px;
     margin-bottom: 88px;
     display: flex;
@@ -439,7 +429,8 @@ nav.nav_container{
 }
 
 .frettabref_wrapper p{
-    background-color: #E2DEDD;
+    background-color: #F4F0F0;
+    color: #584957;
     font-size: 16px;
     font-weight: 100;
     padding-top: 10px;
@@ -475,9 +466,11 @@ nav.nav_container{
     font-size: 16px;
     height: 48px;
     width: 20%;
-    color: white;
+    font-weight: 300;
+    color: #F4F0F0;
     background-color: #584957;
     cursor: pointer;
+    letter-spacing: 1px;
 
 }
 
@@ -513,7 +506,7 @@ footer{
 }
     
 .address{
-    color: #E2DEDD;
+    color: #F4F0F0;
     bottom: 0;
     font-size: 16px;   
 }
@@ -537,11 +530,11 @@ footer{
 
 
 
+
 /********************************************** STAKT NÁMSKEIÐ *********************************************************/
 
-.background_image {
+.background_image_theclass {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/staktnam_img.png");
-    /*background-image: url(../images/staktnamskeid.jpg);*/
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -550,19 +543,9 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-/*.background_image:after {
-
-    content: "";
-    height: 60vh;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0,0,0,0.3);
-}*/
-
-.background_image h1 {
+.background_image_theclass h1 {
     color: #F4F0F0;
     font-family: Roboto, sans-serif !important;
     font-weight: 100;
@@ -573,6 +556,7 @@ footer{
     padding-bottom: 32px;
     z-index: 15;
     margin-top:200px;
+    text-shadow: 0px 0.5px 0.5px #222020;
  }
 
  .gutter{
@@ -674,7 +658,7 @@ footer{
     margin: 32px auto;
     padding-top: 72px;
     line-height: 2.3;
-    width: 100%;
+    width: 80%;
 }
 
 .price_container_left h1{
@@ -741,7 +725,6 @@ footer{
     line-height: 2;  
 }
 
-
 span {
     font-size: 16px;
     font-weight: 300;
@@ -764,6 +747,7 @@ span {
     height: 48px;
     background-color: transparent;
     margin-bottom: 48px;
+    cursor: pointer;
 }
 
 .confirm_hatha:hover {
@@ -808,7 +792,7 @@ span {
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: 32px;
     padding-left: 24px;
 }
 
@@ -824,11 +808,9 @@ span {
 
 
 
-
-/********************************************** Öll námskeið *********************************************************/
-.background_image {
+/********************************************** ÖLL NÁMSKEIÐ *********************************************************/
+.background_image_allclasses {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/oll_namskeid_sida.png");
-    /*background-image: url(../images/staktnamskeid.jpg);*/
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -840,7 +822,7 @@ span {
 
 }
 
-.background_image h1 {
+.background_image_allclasses h1 {
     color: #F4F0F0;
     font-family: Roboto, sans-serif !important;
     font-weight: 100;
@@ -886,6 +868,7 @@ span {
     background-color: transparent;
     margin-bottom: 48px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .all:hover {
@@ -994,7 +977,6 @@ section.container_all_classes{
     text-transform: uppercase;
 }
 
-
 .open_classes button{
     font-size: 16px;
     font-weight: 300;
@@ -1006,6 +988,7 @@ section.container_all_classes{
     background-color: transparent;
     margin-top: 32px;
     margin-left: 22px;
+    cursor: pointer;
 }
 
 .open_classes button:hover {
@@ -1021,14 +1004,13 @@ section.container_all_classes{
 span .purple_color_line{
     border-bottom: 2px solid #8C288C;
     height: 20px;
-    width: 300px;
-    
+    width: 300px;  
 }
+
 span .dark_color_line{
     border-bottom: 2px solid #444242;
     height: 20px;
-    width: 300px;
-    
+    width: 300px;   
 }
 
 .container_new_members{
@@ -1043,24 +1025,24 @@ span .dark_color_line{
     margin-top: 32px;
     cursor: pointer;
 }
+
 .container_new_members h1{
     font-size: 24px;
     letter-spacing: 6px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 100;
-
 }
+
 .container_new_members:hover{
     background-color: #584957;
     color: #F4F0F0;
 }
 
-/********************************************** Kennarar *********************************************************/
+/********************************************** KENNARAR *********************************************************/
 
-.background_image {
+.background_image_teachers  {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/starfs_mynd.png");
-    /*background-image: url(../images/staktnamskeid.jpg);*/
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -1069,10 +1051,9 @@ span .dark_color_line{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-.background_image h1 {
+.background_image_teachers h1 {
     color: #F4F0F0;
     font-family: Roboto, sans-serif !important;
     font-weight: 100;
@@ -1089,8 +1070,9 @@ span .dark_color_line{
      padding:24px;
  }
 
-
-
+ .teachers_container:hover #overlay{
+    opacity: 0.8;
+ }
 
 section.container_all_teachers{
     width: 100%;
@@ -1105,6 +1087,26 @@ section.container_all_teachers{
     margin-top: 80px;
 }
 
+#overlay{ 
+    position: absolute;
+    display: flex;
+    width: 330px;
+    height: 320px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #584957;
+}
+
+#overlay .text{
+    color: #F4F0F0;
+    font-size: 32px;
+    margin: 150px auto;
+    text-align: center;
+    font-weight: 200;
+    font-family: Roboto, sans-serif; 
+    text-shadow: 0px 0.5px 0.5px #222020;  
+}
+
 .container_all_teachers .teachers_container:nth-child(4n){
     margin-right:0px;
 }
@@ -1112,11 +1114,10 @@ section.container_all_teachers{
 
 .teachers_container{
     width: 328px;
-    /* height: 420px; */
+    position: relative;
     color: #584957;
     margin-right: 24px;
-    margin-bottom: 48px;
-    /* margin-top: 80px; */
+    margin-bottom: 48px;  
 }
 
 .teachers_container.last{
@@ -1125,9 +1126,7 @@ section.container_all_teachers{
 
 .teachers_container img{
     width: 330px;
-    height: 320px;
-    
-    
+    height: 320px;   
 }
 
 .teachers_container h1{
@@ -1152,32 +1151,13 @@ section.container_all_teachers{
 #nav-menu > ul > li > button {
     display: none;
   }
-/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxxxxxxxxxxxx*/
-/*.teachers_container img:hover {
-    background-color: #8C288C;*/
-
-/*xxxxxxxxxxxxx  þetta hover eða color over img er ekki að virka xxx*/
-/*.teachers_container img:hover  {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.7s;
-}*/
 
 
-
-
-
-/* Þetta er fyrir mobile menu */
+/* ÞETTA ER FYRIR MOBILE MENU */
 
 #nav-menu > ul > li > button {
     display: none;
   }
-
-
-
-
-
-
-
 
 
 
@@ -1188,6 +1168,23 @@ section.container_all_teachers{
     
     .nav_container .nav_inner ul{
         display: none;
+    }
+
+    #nav-menu{
+        padding: 1em;
+        list-style: none;
+        color: #F4F0F0;
+        font-family: roboto, san serif;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    nav.nav_container .nav_inner a{
+        font-weight: 200;
+        letter-spacing: 2px;
     }
 
     .jogasetur_logo {
@@ -1224,10 +1221,6 @@ section.container_all_teachers{
         
     }
 
-    .nav_list{
-
-    }
-
     .logo-column{
         padding-left: 16px;
     }
@@ -1247,9 +1240,13 @@ section.container_all_teachers{
         margin: 0 auto;
      }
 
+     .top_container{
+        padding-right: 32px;
+     }
+
     .box_1 {
         background-image: url(../images/namskeid_ibodi_.png);
-        height: 450px;
+        height: 410px;
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1274,7 +1271,7 @@ section.container_all_teachers{
     
     .box_1 button {
         background-color: transparent;
-        color: #E2DEDD;
+        color: #F4F0F0;
         font-size: 16;
         font-weight: 200;
         line-height: 32px;
@@ -1293,12 +1290,14 @@ section.container_all_teachers{
 
     .text_after_hero h2{
         font-size: 16px;
+        line-height: 1.9;
+        padding-top: 8px;
     }
 
     .hero_buttons{
         display: flex;
-        flex-direction: column; 
-        margin:8px;  
+        flex-direction: column;
+        margin-bottom: 55px;
     }
 
     .time_container_carousel{
@@ -1320,7 +1319,7 @@ section.container_all_teachers{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 88%;
+        width: 100%;
         max-width: none;
         margin: 0 auto; 
     }
@@ -1338,6 +1337,7 @@ section.container_all_teachers{
     .box_3_4_5 .box {
         width: 100%;
         max-width: none;
+        margin-top: 24px;
     }
 
     .box_3_4_5 .box h3{
@@ -1378,7 +1378,7 @@ section.container_all_teachers{
    
     /*  STAKT NÁMSKEIÐ BYRJAR HÉR  */
 
-    .background_image h1 {
+    .background_image_theclass h1 {
         font-size: 58px;
         /*text-shadow:0.5px 0.5px 0.5px #000000;*/
     }
@@ -1431,10 +1431,8 @@ section.container_all_teachers{
     .color_open{
         height: 32px;
         margin-top:-66px;
-        margin-bottom:20px 
-        
+        margin-bottom:20px    
     }
-
 
     .description_container_2 h2{
         padding-bottom: none;
@@ -1446,9 +1444,7 @@ section.container_all_teachers{
         display: flex;
         flex-direction: column;
         padding-left: 30px;
-
     }
-
 
     .first_time h2{
         padding-left:25px;
@@ -1514,6 +1510,10 @@ section.container_all_teachers{
 
  /*  KENNARAR BYRJA HÉR  */
 
+    .background_image_teachers h1{
+        font-size: 58px;
+    }
+
 
     section.container_all_teachers{
         min-width: auto;
@@ -1533,7 +1533,17 @@ section.container_all_teachers{
         height: 320px;
     }
 
+    #overlay {
+        width:100%;
+    }
+
+
     /*  ÖLL NÁMSKEIÐ BYRJA HÉR  */
+
+
+    .background_image_allclasses h1{
+        font-size: 58px;
+    }
 
     .opening_closing_boxes{
         display: flex;
@@ -1545,8 +1555,9 @@ section.container_all_teachers{
 
     .opening_closing_boxes button{
 
-        width: auto;
+        width: 100%;
         margin-bottom: 15px;
+        margin: 16px auto;
     }
 
     .container_all_classes{
@@ -1585,9 +1596,8 @@ section.container_all_teachers{
 
 
 
-/* Hér er footer */
+/* HÉR ER FOOTER */
     footer {
-    /* height: 192px; */
         background-color: #584957;
         width: 100%;
         display: flex;
@@ -1624,6 +1634,10 @@ section.container_all_teachers{
     .social_media{
         margin: 0 auto;
         margin-top: 30px;
+}
+
+    .container_footer a{
+        margin:0 auto
 }
 
 /* þetta er menu bar fyrir mobile  */
@@ -1674,40 +1688,6 @@ section.container_all_teachers{
     border: 1px;
     z-index: 500;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
