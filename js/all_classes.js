@@ -99,16 +99,20 @@ var displayAllClassesFunction = function(allClassesParameter){
         <div class= ${divClass} >
             <h1>${jogaClassParameter.title}</h1>
             <p> ${jogaClassParameter.subText}</p>
-            <button onClick="renderSingleClass(${index})">Sjá nánar</button>
+            <button onClick="renderSingleClass('${jogaClassParameter.title}')">Sjá nánar</button>
         </div>
         `   
 }
-var renderSingleClass = function(index){
+var renderSingleClass = function(classTitleParameter){
+
+    var singleClass;
+    for(var i = 0; i < allClassesArrayVariable.length; i++){
+        if(classTitleParameter === allClassesArrayVariable[i].title){
+            singleClass = allClassesArrayVariable[i]
+        }
+    }
 
     var mainElement = document.querySelector("main")
-
-    var singleClass = allClassesArrayVariable[index];
-
     mainElement.innerHTML = `<div class="background_image_theclass">
     <h1>Námskeið</h1>
 </div>
@@ -192,7 +196,7 @@ var renderSingleClass = function(index){
     </div>
 </section>
 `
-
+    window.scrollTo(0,0)
 }
 
 var onAllClassesButtonClick = function(){

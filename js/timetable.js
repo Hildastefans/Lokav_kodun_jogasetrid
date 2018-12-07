@@ -219,10 +219,10 @@ var changeDayFunction = function(directionParameter){
 }
 
 // Þetta er fyrir Tímar í dag á forsíðu að hann sýni í námskeið sem opið eða lokað með lit á forsíðu.
-var isClassOpenFunction = function(classNameParameter){
+var isClassOpenFunction = function(classTitleParameter){
 
     for(var i = 0; i < allClassesArrayVariable.length; i++){
-        if(classNameParameter === allClassesArrayVariable[i].title){
+        if(classTitleParameter === allClassesArrayVariable[i].title){
             if(allClassesArrayVariable[i].type === "open"){
                 return true
             } else {
