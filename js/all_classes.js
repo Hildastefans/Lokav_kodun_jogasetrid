@@ -76,26 +76,25 @@ var allClassesArrayVariable = [
     }
 ] // array af námskeiðum
 
-/** functions **/
-var displayAllClassesFunction = function(allClassesParameter){
+/** functions  **/
+var renderClassesFunction = function(classesArrayParameter){
     var containerAllClassesElement = document.getElementById("container_all_classes")
     containerAllClassesElement.innerHTML = ""; // Tæma það sem er í container
-
-    for(var i = 0; i<allClassesParameter.length;i++){
-        var jogaClass = allClassesParameter[i]
-        displayClassFunction(jogaClass, i)
+    // forloppa sem birtir námskeið sem eru í parameternum ()
+    for(var i = 0; i<classesArrayParameter.length;i++){
+        var jogaClass = classesArrayParameter[i]
+        renderClassCardFunction(containerAllClassesElement, jogaClass)
     }
 
  }
-
- var displayClassFunction = function(jogaClassParameter, index){
+// birta hér eitt námskeiðacard 
+ var renderClassCardFunction = function(containerElementParameter, jogaClassParameter){
     var divClass = "open_classes" 
     if (jogaClassParameter.type === "closed") {
         divClass = "close_classes"
      }
     /** bæta við container-inn auka námskeiði */
-    var containerAllClassesElement = document.getElementById("container_all_classes")
-    containerAllClassesElement.innerHTML += `
+    containerElementParameter.innerHTML += `
         <div class= ${divClass} >
             <h1>${jogaClassParameter.title}</h1>
             <p> ${jogaClassParameter.subText}</p>
@@ -111,7 +110,7 @@ var renderSingleClass = function(classTitleParameter){
             singleClass = allClassesArrayVariable[i]
         }
     }
-
+    // finna elementið til að rendera korti inn í   ... 
     var mainElement = document.querySelector("main")
     mainElement.innerHTML = `<div class="background_image_theclass">
     <h1>Námskeið</h1>
@@ -198,20 +197,21 @@ var renderSingleClass = function(classTitleParameter){
 `
     window.scrollTo(0,0)
 }
-
+// hér bý ég til fall
 var onAllClassesButtonClick = function(){
-    displayAllClassesFunction(allClassesArrayVariable)
+// hérna kalla ég í fall
+    renderClassesFunction(allClassesArrayVariable)
 }
 var onOpenClassesButtonClick = function(){
     var openClassesVariable = filterClassesByTypeFunction("open")
-    displayAllClassesFunction(openClassesVariable)
+    renderClassesFunction(openClassesVariable)
 }
 
 var onCloseClassesButtonClick = function(){
     var closeClassesVariable = filterClassesByTypeFunction("closed") //closed inn í sviga er arguments//
-    displayAllClassesFunction(closeClassesVariable)
+    renderClassesFunction(closeClassesVariable)
 }
-
+// card filter - þar sem ég leita eftir opnum eða lokuðum námskeiðum - skilar array með leitarniðurstöðum.
 var filterClassesByTypeFunction = function(typeParameter) {
     var filteredClassesResultVariable = []
     // Fara í gegnum classes og setja í leitarniðurstöðu þau sem eru með rétt type
@@ -223,7 +223,7 @@ var filterClassesByTypeFunction = function(typeParameter) {
             filteredClassesResultVariable.push(classVariable)
         }
     }
-
+    // skila út úr array af objectum 
     return filteredClassesResultVariable
 }
 
@@ -232,11 +232,12 @@ var connectAllClassesPageFunction = function () {
     var openClassesButtonElement = document.getElementById("open_classes_button")
     var closeClassesButtonElement = document.getElementById("close_classes_button")
 
+    // tengja onclick event á elementin ... klikk þá gerist þetta.
     allClassesButtonElement.onclick = onAllClassesButtonClick
     openClassesButtonElement.onclick = onOpenClassesButtonClick
     closeClassesButtonElement.onclick = onCloseClassesButtonClick
 
-    displayAllClassesFunction(allClassesArrayVariable)
+    renderClassesFunction(allClassesArrayVariable)
 }
 
 // Taka út þegar html-ið afrituð í pages
