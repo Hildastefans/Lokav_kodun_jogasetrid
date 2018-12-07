@@ -154,7 +154,7 @@ nav.nav_container{
 
 
 
-/* texti undir forsíðu */
+/* TEXTI UNDIR HERO MYND */
 
 .text_after_hero h2{
     width: 100%;
@@ -533,7 +533,7 @@ footer{
 
 /********************************************** STAKT NÁMSKEIÐ *********************************************************/
 
-.background_image {
+.background_image_theclass {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/staktnam_img.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -545,7 +545,7 @@ footer{
     justify-content: center;
 }
 
-.background_image h1 {
+.background_image_theclass h1 {
     color: #F4F0F0;
     font-family: Roboto, sans-serif !important;
     font-weight: 100;
@@ -808,8 +808,8 @@ span {
 
 
 
-/********************************************** Öll námskeið *********************************************************/
-.background_image {
+/********************************************** ÖLL NÁMSKEIÐ *********************************************************/
+.background_image_allclasses {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/oll_namskeid_sida.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -822,7 +822,7 @@ span {
 
 }
 
-.background_image h1 {
+.background_image_allclasses h1 {
     color: #F4F0F0;
     font-family: Roboto, sans-serif !important;
     font-weight: 100;
@@ -1039,9 +1039,9 @@ span .dark_color_line{
     color: #F4F0F0;
 }
 
-/********************************************** Kennarar *********************************************************/
+/********************************************** KENNARAR *********************************************************/
 
-.background_image {
+.background_image_teachers  {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/starfs_mynd.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -1053,7 +1053,7 @@ span .dark_color_line{
     justify-content: center;
 }
 
-.background_image h1 {
+.background_image_teachers h1 {
     color: #F4F0F0;
     font-family: Roboto, sans-serif !important;
     font-weight: 100;
@@ -1153,7 +1153,7 @@ section.container_all_teachers{
   }
 
 
-/* Þetta er fyrir mobile menu */
+/* ÞETTA ER FYRIR MOBILE MENU */
 
 #nav-menu > ul > li > button {
     display: none;
@@ -1378,7 +1378,7 @@ section.container_all_teachers{
    
     /*  STAKT NÁMSKEIÐ BYRJAR HÉR  */
 
-    .background_image h1 {
+    .background_image_theclass h1 {
         font-size: 58px;
         /*text-shadow:0.5px 0.5px 0.5px #000000;*/
     }
@@ -1510,6 +1510,10 @@ section.container_all_teachers{
 
  /*  KENNARAR BYRJA HÉR  */
 
+    .background_image_teachers h1{
+        font-size: 58px;
+    }
+
 
     section.container_all_teachers{
         min-width: auto;
@@ -1535,6 +1539,11 @@ section.container_all_teachers{
 
 
     /*  ÖLL NÁMSKEIÐ BYRJA HÉR  */
+
+
+    .background_image_allclasses h1{
+        font-size: 58px;
+    }
 
     .opening_closing_boxes{
         display: flex;
@@ -1587,7 +1596,7 @@ section.container_all_teachers{
 
 
 
-/* Hér er footer */
+/* HÉR ER FOOTER */
     footer {
         background-color: #584957;
         width: 100%;

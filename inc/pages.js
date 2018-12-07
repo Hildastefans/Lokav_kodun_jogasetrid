@@ -68,7 +68,7 @@ var pages = {
     </div>
 `,
 teachers: `
-<div class="background_image">
+<div class="background_image_teachers">
 <h1>Kennarar</h1>
 </div>
 <div class="gutter"> 
@@ -81,7 +81,7 @@ teachers: `
 </button>
 }`,
 class: `
-<div class="background_image">
+<div class="background_image_theclass">
     <h1>Námskeið</h1>
 </div>
 <div class="gutter">  
@@ -166,7 +166,7 @@ class: `
 </section>
 `,
 all_classes: `
-<div class="background_image">
+<div class="background_image_allclasses">
 <h1 class="hero_text_classes">Námskeið</h1>
 </div>
 
