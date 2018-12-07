@@ -7,7 +7,7 @@ var pages = {
             <div class= "hero_buttons">
                 <button type="button">Kennaranám</button>
                 <button type="button">spurningar & svör</button>
-                <button type="button">Öll námskeið</button>
+                <button type="button" onclick="showAllClassesPageFunction()">Öll námskeið</button>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@ var pages = {
         <!-- hér eru 3 litlir kassar á forsíðu -->
 
         <div class= box_3_4_5>
-            <a href="#" alt="meðgöngujóga">
+            <a href="#" alt="meðgöngujóga" onclick="renderSingleClass('Meðgöngujóga')">
                 <div class=box>
                     <img src="images/medgongu_forsida.png" alt="">
                     <h3>Meðgöngujóga</h3>
